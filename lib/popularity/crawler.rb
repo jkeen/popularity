@@ -1,10 +1,10 @@
 require 'open-uri'
 require 'open_uri_redirections'
 require 'json'
+require 'unirest'
 
 module Popularity
   class Crawler
-
     def initialize(url)
       @url = url
     end
@@ -30,23 +30,34 @@ module Popularity
       true # to be overridden in subclasses
     end
 
+    def async_done?
+      @async_done
+    end
+
     def host
       URI.parse(@url).host.gsub('www.', '')
     end
 
     def response_json
       @json ||= JSON.parse(response)
-
     end
 
     def name
       self.class.to_s.split('::').last.gsub(/(.)([A-Z])/,'\1_\2').downcase
     end
 
+    def fetch_async(&block)
+      Unirest.get(request_url) do |response|
+        @async_done = true
+        @response = response.body
+        block.call(response.code, response.body) if block_given? 
+      end
+    end
+
     def fetch
       begin
-        f = Timeout::timeout(10) { open(request_url, :allow_redirections => :safe) }
-        response = f.read()
+        response = Unirest.get(request_url)
+        @response = response.body
       rescue OpenURI::HTTPError, Timeout::Error, SocketError
         nil
       end

@@ -19,6 +19,10 @@ module Popularity
       path.split('/').delete_if { |a| a.empty? }.size == 6
     end
 
+    def name
+      "reddit"
+    end
+
     protected
 
     def request_url

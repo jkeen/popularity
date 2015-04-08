@@ -1,6 +1,6 @@
 
 require 'popularity/crawler'
-require 'popularity/aggregator'
+require 'popularity/runner'
 require 'popularity/facebook'
 require 'popularity/twitter'
 require 'popularity/pinterest'
@@ -17,25 +17,24 @@ module Popularity
 
   def self.search(*urls)
   	response = {}
-
     Search.new(:urls => urls)
   end
 
   class Search
-    attr_accessor :aggregators
+    attr_accessor :runners
 
     def initialize(options = {})
-      self.aggregators = []
+      self.runners = []
 
       options[:urls].each do |url|
-        a = Aggregator.new(url)
-        self.aggregators << a
+        a = Runner.new(url)
+        self.runners << a
       end
     end 
 
     def total
       total = 0
-      self.aggregators.each do |a|
+      self.runners.each do |a|
         total += a.total
       end
 

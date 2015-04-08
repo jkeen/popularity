@@ -2,7 +2,6 @@ module Popularity
   class RedditPost < Crawler
     def score
       return unless has_response?
-
       response_json[0]["data"]["children"][0]["data"]["score"] 
     end
 
@@ -28,6 +27,10 @@ module Popularity
       
       path = URI.parse(@url).path
       path.split('/').delete_if { |a| a.empty? }.size < 6
+    end
+
+    def name
+      "reddit"
     end
 
     protected

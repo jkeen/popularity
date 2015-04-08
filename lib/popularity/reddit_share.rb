@@ -23,6 +23,10 @@ module Popularity
       comment_count.reduce(:+).to_i + score.reduce(:+).to_i
     end
 
+    def name
+      "reddit"
+    end
+
     protected
 
     def request_url
