@@ -49,15 +49,15 @@ module Popularity
     def fetch_async(&block)
       Unirest.get(request_url) do |response|
         @async_done = true
-        @response = response.body
-        block.call(response.code, response.body) if block_given? 
+        @response = response.raw_body
+        block.call(response.code, response.raw_body) if block_given? 
       end
     end
 
     def fetch
       begin
         response = Unirest.get(request_url)
-        @response = response.body
+        @response = response.raw_body
       rescue OpenURI::HTTPError, Timeout::Error, SocketError
         nil
       end

@@ -16,10 +16,16 @@ module Popularity
 
       selected_types.each do |network|
         network.fetch_async do |code, body|
-          if network.has_response?
-            add_finding(network.name, network)
-            @info[network.name] = network.info
-            total_score << network.total
+          add_finding(network.name, network)
+          begin 
+            if network.has_response?
+              @info[network.name] = network.info
+              total_score << network.total
+            end
+          rescue Exception => e
+            puts "#{network.name} had an accident"
+            puts e.message
+            puts e.backtrace.join("\n")
           end
         end
       end
