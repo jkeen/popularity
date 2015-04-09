@@ -15,5 +15,13 @@ describe Popularity::GooglePlus do
     it "should calculate the correct total" do
       expect(subject.plus_ones).to equal subject.total
     end
+
+    context "json" do
+      let(:json) { subject.to_json }
+
+      it "should have required attributes in json" do 
+        expect(subject.plus_ones).to eq(json["plus_ones"])
+      end
+    end
   end
 end

@@ -5,7 +5,7 @@ module Popularity
     end
 
     def as_json(options = {})      
-      {:pins => pins}
+      {"pins" => pins}
     end
 
     def total

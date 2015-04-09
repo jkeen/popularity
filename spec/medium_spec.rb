@@ -35,5 +35,13 @@ describe Popularity::Medium do
     it "should have correct number of recommends" do
       expect(13).to eq(subject.recommends)
     end
+
+    context "json" do
+      let(:json) { subject.to_json }
+
+      it "should have required attributes in json" do 
+        expect(subject.recommends).to eq(json["recommends"])
+      end
+    end
   end
 end

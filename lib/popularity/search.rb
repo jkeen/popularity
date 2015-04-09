@@ -39,11 +39,11 @@ module Popularity
     def to_json(options ={})
       json = {}
       self.results.collect do |result|
-        json[result.name] = result.to_json
+        json[result.name.to_s] = result.to_json
       end
 
-      self.sources.collect do |result|
-        json[result.to_s] = self.send(result.to_sym).to_json
+      self.sources.collect do |source|
+        json[source.to_s] = self.send(source.to_sym).to_json
       end
 
       json["total"] = total

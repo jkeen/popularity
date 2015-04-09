@@ -11,8 +11,27 @@ describe Popularity::Search do
     it "should return correct total" do
       expect(23422351).to equal subject.total
     end
-  end
 
+    context "json" do
+      let(:json) { subject.to_json }
+
+      it "should have each url as root json key" do 
+        subject.sources.each do |source|
+          expect(json[source.to_s]).to_not be_nil
+        end
+      end
+
+      it "should have each network as root json key" do 
+        subject.searches.each do |search|
+          expect(json[search.url.to_s]).to_not be_nil
+        end
+      end
+
+      it "should have each total as root json key" do 
+        expect(json["total"]).to_not be_nil
+      end
+    end
+  end
 
   context "multiple url" do
     use_vcr_cassette "search-multi"
@@ -31,6 +50,26 @@ describe Popularity::Search do
 
     it "should allow access to individual results" do
       expect(subject.facebook.results.size).to eq(2)
+    end
+
+    context "json" do
+      let(:json) { subject.to_json }
+
+      it "should have each url as root json key" do 
+        subject.sources.each do |source|
+          expect(json[source.to_s]).to_not be_nil
+        end
+      end
+
+      it "should have each network as root json key" do 
+        subject.searches.each do |search|
+          expect(json[search.url.to_s]).to_not be_nil
+        end
+      end
+
+      it "should have each total as root json key" do 
+        expect(json["total"]).to_not be_nil
+      end
     end
   end
 end

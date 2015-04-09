@@ -22,8 +22,8 @@ module Popularity
 
     def as_json(options = {})      
       {
-        :comments => comment_count,
-        :score => score
+        "comments" => comment_count,
+        "score" => score
       }
     end
 

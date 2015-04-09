@@ -48,6 +48,13 @@ module Popularity
       self.searches.collect do |search|
         json[search.url] = search.to_json
       end
+
+      self.sources.collect do |source|
+        json[source.to_s] = self.send(source.to_sym).to_json
+      end
+
+      json["total"] = total
+
       json
     end
 

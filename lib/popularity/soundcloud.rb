@@ -17,10 +17,10 @@ module Popularity
     end
 
     def as_json(options = {})      
-      {:plays => plays,
-       :likes => likes,
-       :comments => comments,
-       :downloads => downloads }
+      {"plays" => plays,
+       "likes" => likes,
+       "comments" => comments,
+       "downloads" => downloads }
     end
 
     def total

@@ -43,6 +43,22 @@ module Popularity
       self
     end
 
+    def to_json(options ={})
+      total = {}
+      @results.collect(&:to_json).each do |json|
+        json.each do |key, value|
+            total[key] ||= 0
+            total[key] += value
+        end
+      end
+      total["posts"] = posts
+      total
+    end
+
+    def posts
+      @results.size
+    end
+
     def name
       "reddit"
     end

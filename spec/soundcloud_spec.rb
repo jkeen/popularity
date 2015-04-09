@@ -51,5 +51,16 @@ describe Popularity::Soundcloud do
     it "should have the correct total" do
       expect(subject.comments + subject.downloads + subject.likes + subject.plays).to eq(subject.total)
     end
+
+    context "json" do
+      let(:json) { subject.to_json }
+
+      it "should have required attributes in json" do 
+        [:plays, :likes, :downloads, :comments].each do |att|
+          expect(subject.send(att)).to eq(json[att.to_s])
+        end
+      end
+    end
+
   end
 end

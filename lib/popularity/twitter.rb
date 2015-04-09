@@ -9,7 +9,7 @@ module Popularity
     end
 
     def as_json(options = {})
-      {:tweets => tweets}
+      {"tweets" => tweets}
     end
 
     protected

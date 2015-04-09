@@ -9,8 +9,8 @@ module Popularity
     end
 
     def as_json(options = {})
-      { :shares => shares,
-        :comments => comments }
+      { "shares" => shares,
+        "comments" => comments }
     end
 
     def total
