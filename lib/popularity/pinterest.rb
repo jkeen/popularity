@@ -4,7 +4,7 @@ module Popularity
       JSON.parse(response.gsub('receiveCount(','').gsub(')',''))['count'].to_f.to_i
     end
 
-    def as_json
+    def as_json(options = {})      
       {:pins => pins}
     end
 

@@ -1,17 +1,26 @@
 module Popularity
   class RedditPost < Crawler
     def score
-      return unless has_response?
-      response_json[0]["data"]["children"][0]["data"]["score"] 
+      return unless has_response? 
+
+      begin
+        response_json[0]["data"]["children"][0]["data"]["score"] 
+      rescue
+        0
+      end
     end
 
     def comment_count
       return unless has_response?
 
-      response_json[0]["data"]["children"][0]["data"]["num_comments"] 
+      begin
+        response_json[0]["data"]["children"][0]["data"]["num_comments"] 
+      rescue
+        0
+      end
     end
 
-    def as_json
+    def as_json(options = {})      
       {
         :comments => comment_count,
         :score => score

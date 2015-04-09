@@ -31,21 +31,24 @@ module Popularity
 
   class MultiSearch
     attr_accessor :searches
+    attr_accessor :sources
 
     def initialize(options = {})
       @searches = options[:urls].collect { |url| Search.new(url) }
 
       @searches.each do |search|
         search.results.each do |result|
-          add_result_type(result)
+          add_search_result(result)
         end
       end
     end 
 
-    def as_json
-      self.searches.collect do |a|
-        a.info
+    def to_json(options = {})      
+      json = {}
+      self.searches.collect do |search|
+        json[search.url] = search.to_json
       end
+      json
     end
 
     def total
@@ -59,10 +62,12 @@ module Popularity
 
     protected
 
-    def add_result_type(result)
+    def add_search_result(result)
       container = self.instance_variable_get("@#{result.name}") 
 
       unless container
+        @sources ||= [] 
+        @sources << result.name.to_sym 
         container = Popularity::ResultsContainer.new
         self.instance_variable_set "@#{result.name}", container
         self.define_singleton_method(result.name.to_sym) { container }

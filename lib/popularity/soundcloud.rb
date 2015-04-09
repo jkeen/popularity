@@ -16,7 +16,7 @@ module Popularity
       response.scan(/\"soundcloud:download_count\" content=\"([0-9]*)\"/).flatten.first.to_f.to_i
     end
 
-    def as_json
+    def as_json(options = {})      
       {:plays => plays,
        :likes => likes,
        :comments => comments,

@@ -34,7 +34,7 @@ module Popularity
         new_json = response_json.clone
 
         new_json["data"]["children"] = [child]
-        url = "http://reddit.com/#{child["data"]["permalink"]}"
+        url = "http://reddit.com#{child["data"]["permalink"]}"
         post = RedditResult.new(url, JSON.dump([new_json]))
 
         self.add_result(post)

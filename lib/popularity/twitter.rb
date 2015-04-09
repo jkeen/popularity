@@ -8,7 +8,7 @@ module Popularity
       tweets
     end
 
-    def as_json
+    def as_json(options = {})
       {:tweets => tweets}
     end
 

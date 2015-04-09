@@ -4,7 +4,7 @@ module Popularity
       response_json[1]["data"]["children"][0]["data"]["score"] 
     end
 
-    def as_json 
+    def as_json(options = {})
       {:score => score}
     end
 

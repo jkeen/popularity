@@ -8,7 +8,7 @@ module Popularity
       response_json['comments'].to_f.to_i
     end
 
-    def as_json
+    def as_json(options = {})
       { :shares => shares,
         :comments => comments }
     end

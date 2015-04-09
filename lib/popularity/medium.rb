@@ -4,7 +4,7 @@ module Popularity
       response_json["payload"]["value"]["count"]
     end
 
-    def as_json
+    def as_json(options = {})      
       {:recommends => recommends}
     end
 

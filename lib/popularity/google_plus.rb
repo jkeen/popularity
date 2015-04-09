@@ -5,7 +5,7 @@ module Popularity
       matches.flatten.first.to_f.to_i
     end
 
-    def as_json 
+    def as_json(options = {})
       {:plus_ones => plus_ones}
     end
 

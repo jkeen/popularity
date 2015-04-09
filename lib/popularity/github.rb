@@ -4,7 +4,7 @@ module Popularity
       response_json.size
     end
 
-    def as_json
+    def as_json(options = {})      
       { :stars => stars }
     end
 

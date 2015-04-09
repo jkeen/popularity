@@ -3,6 +3,8 @@ module Popularity
     attr_accessor :info
     attr_accessor :results
     attr_accessor :sources
+    attr_reader :total
+    attr_reader :url
 
     def initialize(url)
       @url = url
@@ -14,7 +16,6 @@ module Popularity
           add_result(network)
           begin 
             if network.has_response?
-              @info[network.name] = network.info
               total_score << network.total
             end
           rescue Exception => e
@@ -32,11 +33,22 @@ module Popularity
         break if selected_types.all? { |network| network.async_done? }
       end
 
-      @info[:total_score] = total_score.compact.reduce(:+)
+      @total = total_score.reduce(:+)
     end
 
-    def total
-      @info[:total_score]
+    def to_json(options ={})
+      json = {}
+      self.results.collect do |result|
+        json[result.name] = result.to_json
+      end
+
+      self.sources.collect do |result|
+        json[result.to_s] = self.send(result.to_sym).to_json
+      end
+
+      json["total"] = total
+
+      json
     end
 
     protected
@@ -53,7 +65,7 @@ module Popularity
       self.sources ||= []
       self.results ||= []
       self.results << result
-      self.sources << result.name
+      self.sources << result.name.to_sym
 
       self.instance_variable_set "@#{result.name}", result
 

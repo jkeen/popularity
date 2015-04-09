@@ -5,6 +5,8 @@ require 'unirest'
 
 module Popularity
   class Crawler
+    attr_reader :url
+
     def initialize(url)
       @url = url
     end
@@ -46,8 +48,8 @@ module Popularity
       self.class.to_s.split('::').last.gsub(/(.)([A-Z])/,'\1_\2').downcase
     end
 
-    def to_json
-      {@url => as_json}
+    def to_json(options = {})
+      as_json(options)
     end
 
     def fetch_async(&block)
