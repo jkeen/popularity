@@ -22,7 +22,7 @@ Soundcloud       | `plays`, `likes`, `comments`, `downloads` | only for soundclo
 > search.facebook.shares    #=> share count
 > search.facebook.comments  #=> comment count
 > search.twitter.tweets     #=> tweet count
-> search.pinterests.pins    #=> pin count
+> search.pinterest.pins    #=> pin count
 > search.reddit.posts     #=> post count
 > search.reddit.comments    #=> comment count across all posts
 > search.reddit.score       #=> reddit score total across all posts
@@ -39,7 +39,7 @@ Sometimes multiple URLs refer to the same thing. Maybe your URLs changed, but yo
 > search.facebook.shares    #=> share count across all urls
 > search.facebook.comments  #=> comment count across all urls
 > search.twitter.tweets     #=> tweet count across all urls
-> search.pinterests.pins    #=> pin count across all urls
+> search.pinterest.pins    #=> pin count across all urls
 > search.reddit.posts     #=> post count across all urls
 > search.reddit.comments    #=> comment count across all posts and urls
 > search.reddit.score       #=> reddit score total across all posts and urls
@@ -64,7 +64,7 @@ search.sources #=> [:facebook, :reddit, :google_plus, :pinterest, :twitter, :med
 search.results #=> returns the individual network result classes, i.e. RedditPost, Medium, Soundcloud, Facebook
 ```
 
-All of the searches done through Popularity.search are done asynchronously, but you don't need to worry about any of that because the method still blocks, so you can use it just like any other syncrhonous method.
+All of the searches done through Popularity.search are done asynchronously, but you don't need to worry about any of that because the method still blocks, so you can use it just like any other synchronous method.
 
 To just query one network, interact with the class directly.
 
@@ -72,8 +72,6 @@ To just query one network, interact with the class directly.
 p = Popularity::RedditComment.new("http://www.reddit.com/r/:subreddit/comments/:id/:name/:comment")
 p.score #=> comment score
 ```
-
-
 
 ### Contributing to Popularity
  
