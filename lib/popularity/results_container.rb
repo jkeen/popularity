@@ -1,3 +1,4 @@
+
 module Popularity
   module ContainerMethods
     def self.included(base)
@@ -50,7 +51,7 @@ module Popularity
         end
 
         def method_missing(method_sym, *arguments, &block)
-          # the first argument is a Symbol, so you need to_s it if you want to pattern match
+          return 0 unless @results
           collection = @results.collect do |result|
             result.send(method_sym, *arguments)
           end

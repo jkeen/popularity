@@ -50,7 +50,7 @@ describe Popularity::RedditPost do
     end
 
     it "should have correct number of comments" do
-      expect(36).to eq(subject.comment_count)
+      expect(36).to eq(subject.comments)
     end
 
     it "should have correct score" do
@@ -58,7 +58,7 @@ describe Popularity::RedditPost do
     end
 
     it "should have correct total" do
-      expect(subject.total).to eq(subject.score + subject.comment_count)
+      expect(subject.total).to eq(subject.score + subject.comments)
     end
   end
 end

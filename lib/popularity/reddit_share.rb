@@ -44,7 +44,9 @@ module Popularity
     end
 
     def to_json(options ={})
-      total = {}
+      total = {"comments" => 0, "posts" => 0, "score" => 0}
+      return total unless @results
+
       @results.collect(&:to_json).each do |json|
         json.each do |key, value|
             total[key] ||= 0
@@ -56,7 +58,7 @@ module Popularity
     end
 
     def posts
-      @results.size
+      @results.size rescue 0
     end
 
     def name

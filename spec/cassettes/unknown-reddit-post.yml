@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.reddit.com/r/search/search.json?q=url:http://jeffkeen.me/totallyunknown
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 09 Apr 2015 21:56:46 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d50f20e6118c05422f5d59fe19256efb91428616606; expires=Fri, 08-Apr-16
+        21:56:46 GMT; path=/; domain=.reddit.com; HttpOnly
+      X-Ua-Compatible:
+      - IE=edge
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - X-Reddit-Tracking, X-Moose
+      X-Reddit-Tracking:
+      - https://pixel.redditmedia.com/pixel/of_destiny.png?v=NPjKlQn6h%2F0gWlAsQzt7u95XdyAaw8SNbh8xp5HZg3KKYA9i7jpvVCL6GuG0jB8s%2F51Z0Ey4yao%3D
+      X-Moose:
+      - majestic
+      Cache-Control:
+      - no-cache
+      Cf-Cache-Status:
+      - MISS
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 1d4976c03d7903ee-DFW
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAy3JwQ2AIAxG4VWa/8wEzOAGxgPaIo1YEsATYXdj4vF9b+BS
+        Y3jCoq2rnXAEDj3A08BdOIWWvv35kTRzFYOndXOEELtUeLInZ0fYJZYqf8/5
+        AmghW1ZbAAAA
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 21:56:47 GMT
+recorded_with: VCR 2.9.3

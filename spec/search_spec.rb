@@ -48,6 +48,10 @@ describe Popularity::Search do
       expect(subject.facebook.shares).to eq(shares.reduce(:+))
     end
 
+    it "should combine results" do
+      expect(subject.searches.collect(&:results).reduce(:+).size).to eq(subject.results.size)
+    end
+
     it "should allow access to individual results" do
       expect(subject.facebook.results.size).to eq(2)
     end

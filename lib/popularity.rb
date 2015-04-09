@@ -18,6 +18,7 @@ module Popularity
 
   def self.search(*urls)
   	response = {}
+
     MultiSearch.new(:urls => urls)
   end
 
@@ -42,6 +43,10 @@ module Popularity
         end
       end
     end 
+
+    def results
+      searches.collect(&:results).reduce(:+)
+    end
 
     def to_json(options = {})      
       json = {}
