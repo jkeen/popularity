@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdn.api.twitter.com/1/urls/count.json?url=http://google.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 09 Apr 2015 17:30:25 GMT
+      Server:
+      - tsa_a
+      Cache-Control:
+      - must-revalidate, max-age=900
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Expires:
+      - Thu, 09 Apr 2015 17:44:35 GMT
+      Last-Modified:
+      - Thu, 09 Apr 2015 17:29:35 GMT
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - d92a3da2734891d68f5a79f0d1800a3b
+      X-Response-Time:
+      - '11'
+      Content-Length:
+      - '71'
+      Accept-Ranges:
+      - bytes
+      Via:
+      - 1.1 varnish
+      Age:
+      - '51'
+      X-Served-By:
+      - cache-tw-dfw1-cr1-3-TWDFW1
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '1'
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAKpWSs4vzStRsjI0NDU11FEqLcpRslLKKCkpsIrRj9FPz89P
+        z0nVS87PjdFXqgUAAAD//wMABIYJ+C0AAAA=
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 17:30:25 GMT
+recorded_with: VCR 2.9.3

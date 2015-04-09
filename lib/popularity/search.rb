@@ -1,22 +1,17 @@
 module Popularity
-  class Runner
+  class Search
     attr_accessor :info
-    attr_accessor :hits
+    attr_accessor :results
+    attr_accessor :sources
 
     def initialize(url)
       @url = url
       @info = {}
       total_score = []
 
-      # github.com stats only valid for github urls, etc
-      selected_types = Popularity::TYPES.collect { |n|
-        network = n.new(@url)
-        network if network.eligible?
-      }.compact
-
       selected_types.each do |network|
         network.fetch_async do |code, body|
-          add_finding(network.name, network)
+          add_result(network)
           begin 
             if network.has_response?
               @info[network.name] = network.info
@@ -46,14 +41,23 @@ module Popularity
 
     protected
 
-    def add_finding(name, network)
-      self.hits ||= []
-      self.hits << name.to_sym
+    def selected_types
+      # github.com stats only valid for github urls, etc
+      @types ||= Popularity::TYPES.collect { |n|
+        network = n.new(@url)
+        network if network.valid?
+      }.compact
+    end
 
-      self.instance_variable_set "@#{name}", network
-      self.class.class_eval do
-        define_method(name) { network }
-      end
+    def add_result(result)
+      self.sources ||= []
+      self.results ||= []
+      self.results << result
+      self.sources << result.name
+
+      self.instance_variable_set "@#{result.name}", result
+
+      self.define_singleton_method(result.name.to_sym) { result }
     end
 
     def to_s

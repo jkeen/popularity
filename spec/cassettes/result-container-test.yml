@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://graph.facebook.com/?id=http://google.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1682606'
+      Etag:
+      - '"21a2271551d3f5b883ac6f5c01c88dfc2bab0317"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v1.0
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - 4lSu/DcPqy8bLDVdf1X5SmTLni750CiwUngCoTO29keqHgjvNgGhMTkxa1IHokigEhq7sfGzRGHjoyxRJFZbdw==
+      Date:
+      - Thu, 09 Apr 2015 17:30:23 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '63'
+    body:
+      encoding: UTF-8
+      string: '{"id":"http:\/\/google.com","shares":12085903,"comments":10121}'
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 17:30:23 GMT
+- request:
+    method: get
+    uri: http://graph.facebook.com/?id=http://yahoo.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1682606'
+      Etag:
+      - '"3f87d16c6b8706584529035596d916b754797c82"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v1.0
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - tFLmYsCu7U46zM6Z+vlCSvxXe18qxyQF17MU4gLxbvdeSuqv+j0S9Pg1M55TvcLecpD3vl1xvnpDFbSsh8vddA==
+      Date:
+      - Thu, 09 Apr 2015 17:30:23 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '60'
+    body:
+      encoding: UTF-8
+      string: '{"id":"http:\/\/yahoo.com","shares":946786,"comments":10412}'
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 17:30:24 GMT
+recorded_with: VCR 2.9.3

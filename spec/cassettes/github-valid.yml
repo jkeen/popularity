@@ -1,0 +1,105 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/repos/jkeen/tracking_number/stargazers
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Thu, 09 Apr 2015 17:30:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '60'
+      X-Ratelimit-Remaining:
+      - '59'
+      X-Ratelimit-Reset:
+      - '1428604221'
+      Cache-Control:
+      - public, max-age=60, s-maxage=60
+      Etag:
+      - W/"507d3bb8ef40c3d1a7379fb5e0554248"
+      Vary:
+      - Accept
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - deny
+      Content-Security-Policy:
+      - default-src 'none'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Github-Request-Id:
+      - 42444720:2DE4:4D0003:5526B72D
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Served-By:
+      - b0ef53392caa42315c6206737946d931
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 17:30:21 GMT
+recorded_with: VCR 2.9.3

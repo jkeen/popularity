@@ -11,7 +11,7 @@ module Popularity
       response_json[0]["data"]["children"][0]["data"]["num_comments"] 
     end
 
-    def info
+    def as_json
       {
         :comments => comment_count,
         :score => score
@@ -22,7 +22,7 @@ module Popularity
       comment_count + score
     end
 
-    def eligible?
+    def valid?
       return false unless host == 'reddit.com'
       
       path = URI.parse(@url).path

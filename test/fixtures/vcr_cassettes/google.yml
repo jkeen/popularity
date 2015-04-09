@@ -1,0 +1,425 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.pinterest.com/v1/urls/count.json?url=http://google.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - private
+      Content-Type:
+      - application/javascript
+      Date:
+      - Thu, 09 Apr 2015 03:12:39 GMT
+      Expires:
+      - Thu, 09 Apr 2015 03:27:39 GMT
+      Via:
+      - 1.1 varnish
+      X-Pinterest-Rid:
+      - '757429265171'
+      X-Varnish:
+      - '2939856995'
+      Content-Length:
+      - '55'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: receiveCount({"url":"http://google.com","count":11278})
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 03:12:39 GMT
+- request:
+    method: get
+    uri: https://cdn.api.twitter.com/1/urls/count.json?url=http://google.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 09 Apr 2015 03:12:39 GMT
+      Server:
+      - tsa_a
+      Cache-Control:
+      - must-revalidate, max-age=900
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json;charset=utf-8
+      Expires:
+      - Thu, 09 Apr 2015 03:27:01 GMT
+      Last-Modified:
+      - Thu, 09 Apr 2015 03:12:01 GMT
+      Strict-Transport-Security:
+      - max-age=631138519
+      X-Connection-Hash:
+      - 4574ad1f705ba9a017f67db5e8fa9a9e
+      X-Response-Time:
+      - '8'
+      Content-Length:
+      - '71'
+      Accept-Ranges:
+      - bytes
+      Via:
+      - 1.1 varnish
+      Age:
+      - '38'
+      X-Served-By:
+      - cache-tw-dfw1-cr1-7-TWDFW1
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '1'
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAKpWSs4vzStRsjI0NDUx11EqLcpRslLKKCkpsIrRj9FPz89P
+        z0nVS87PjdFXqgUAAAD//wMAyAG0hy0AAAA=
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 03:12:40 GMT
+- request:
+    method: get
+    uri: http://www.reddit.com/r/search/search.json?q=url:http://google.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 09 Apr 2015 03:12:40 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dc7ca1cb87dca3cfcd56dc1941116f6f41428549159; expires=Fri, 08-Apr-16
+        03:12:39 GMT; path=/; domain=.reddit.com; HttpOnly
+      X-Ua-Compatible:
+      - IE=edge
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - X-Reddit-Tracking, X-Moose
+      X-Reddit-Tracking:
+      - https://pixel.redditmedia.com/pixel/of_destiny.png?v=Su64bYnwfouZP4ET8hUjlgl93jq09FCNXXsel6v1CwWKQluLktCmlnVbTjLMFr1YREYXuPKAxiQ%3D
+      Vary:
+      - Accept-Encoding
+      X-Moose:
+      - majestic
+      Cache-Control:
+      - no-cache
+      Cf-Cache-Status:
+      - HIT
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 1d430819b0690107-DFW
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+        dHrW8dhzAAA=
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 03:12:40 GMT
+- request:
+    method: get
+    uri: https://plusone.google.com/_/+1/fastbutton?url=http://google.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=edge, chrome=1
+      Vary:
+      - Accept-Encoding
+      Timing-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      Date:
+      - Thu, 09 Apr 2015 03:12:40 GMT
+      Set-Cookie:
+      - NID=67=gGR_Ix72yF1ah2CP71ZuFb1b7XaXHCrKnezVJNjofCXaFSCWnjoYyGMJsYCt7PfgkUMOnfLLodJBkYnbv2T6NtrILqyXxCjJELYBZ5pJUT8zZtEIXwyOUKRzfYBZJDfe;Domain=.google.com;Path=/;Expires=Fri,
+        09-Oct-2015 03:12:40 GMT;HttpOnly
+      P3p:
+      - CP="This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657
+        for more info."
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Server:
+      - GSE
+      Alternate-Protocol:
+      - 443:quic,p=0.5
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |-
+        <!DOCTYPE html><html lang="en" dir="ltr"><head><base href="https://plusone.google.com/wm/1/"><style>body {-webkit-font-smoothing: antialiased;}@font-face {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          src: url(//fonts.gstatic.com/s/roboto/v15/W5F8_SL0XFawnjxHGsZjJA.ttf) format('truetype');
+        }
+        </style><link rel="stylesheet" href="/_/scs/apps-static/_/ss/k=oz.plusone.1gqu2bwggaja0.L.X.O/d=0/rs=AGLTcCPuKn23za2sQkdpg8dg1DC0KN0O8w"><script>function __sp() {try {var params = {};params['height'] =  24.0 ;params['width'] =  106.0 ;params['title'] = '+1';} catch (e) {return null}return params;}var _F_jsUrl = "\/_\/scs\/apps-static\/_\/js\/k\x3doz.plusone.en_US.PH2K4T6R8Xw.O\/m\x3dp1b,p1p\/rt\x3dj\/d\x3d1\/t\x3dzcms\/rs\x3dAGLTcCPutGWkp0nc2HeI_31uRDWtZjPi3A";var gapi=window.gapi=window.gapi||{};(function() { var f=function(a,c){var d=a.match(new RegExp(".*(\\?|#|&)"+c+"=([^&#]+)"))||[];return decodeURIComponent(d[d.length-1]||"")},r=function(a,c){g(l(),a,c)},t=function(a,c){g(!0,a,c)},g=function(a,c,d){function u(b){if(!b.match(/^https?\:\/\//))return"";var a=m.createElement("a");a.href=b;a.pathname=a.search=a.hash="";return a.href.replace(/\/\??\#?$/,"")}function n(){a?(e.s=p+"/"+h+":"+p+":"+e.s,e.g=!1,d&&(e.a=d.slice(1)),b.parent.postMessage("!_"+b.JSON.stringify(e),q||"*")):b.parent.postMessage(b.JSON.stringify(e),
+        q||"*")}var b=window,m=b.document;if(b.postMessage&&b.JSON&&b.JSON.stringify&&b!=b.parent){var h=b.name,k=b.location.href,q=u(f(k,"parent")),p=f(k,"pfname"),e={s:c,f:h,r:h,t:f(k,"rpctoken"),a:d||[""],g:"ping"};m.all?b.setTimeout(n,0):n()}},v=function(a,c){g(!1,"widget-csi-tick-"+window.name,[a,null,c])},l=function(a){var c=window;return"1"===f(a||c.location.href,"usegapi")};window.gapi.inline=window.gapi.inline||{ping:r,tick:v,shouldUseGapi:l,pingGapi:t}; })();
+        var sentRenderStart = false; function gapi_sendRenderStart() {if (sentRenderStart) {return}sentRenderStart = true; var sz = __sp(); if (sz) {gapi.inline.ping('_renderstart', ['', sz]);}}document.createElement('content');</script><script>var AF_initDataKeys = []
+        ; var AF_dataServiceRequests = {}; var AF_initDataChunkQueue = []; var AF_initDataCallback; var AF_initDataInitializeCallback; if (AF_initDataInitializeCallback) {AF_initDataInitializeCallback(AF_initDataKeys, AF_initDataChunkQueue, AF_dataServiceRequests);}if (!AF_initDataCallback) {AF_initDataCallback = function(chunk) {AF_initDataChunkQueue.push(chunk);};}</script></head><body class="kv8eNc "><div id="root"><script>var AF_initDataKeys = []
+        ; var AF_dataServiceRequests = {}; var AF_initDataChunkQueue = []; var AF_initDataCallback; var AF_initDataInitializeCallback; if (AF_initDataInitializeCallback) {AF_initDataInitializeCallback(AF_initDataKeys, AF_initDataChunkQueue, AF_dataServiceRequests);}if (!AF_initDataCallback) {AF_initDataCallback = function(chunk) {AF_initDataChunkQueue.push(chunk);};}</script><script type="text/javascript">window.__SSR = {c: 1.11715E7 ,a:'bubble',at:'AEIZW7SxAsNTTKWnXp0H0mrR63iRs\/mlSjtGgwp\/x4j7Uu7M6k3E+KkmXKFEpSsLUnk8qF697m2OsKakRRkbp+Z2XdfgnQGvC5f5qQmIGl7o9hhC0ys5ZEA\x3d',ld:[,[2,11171500,[]
+        ,1,106]
+        ]
+        ,s:'widget',annd: 2.0 ,bp: {}, id:'http:\/\/google.com\/'}; document.addEventListener && document.addEventListener('DOMContentLoaded', function () {gapi.inline.tick('wdc', new Date().getTime());}, false);</script><div id="plusone" dir="ltr" class="Jg" ><span id="widget_bounds"><div class="dIa"><div style="height:24px;width:38px;" class="FP HP Gib Ina " id="button" title="+1" role="button" tabindex="0"><div class="Ul"><div style="margin:0px 0px 0 0px;" class="s7"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" width="36px" height="22px" viewBox="-7 -4 36 22" class="u7 uzlpSb"><path d="m6.165,5.363c.438-.427 .478-1.019 .478-1.351 0-1.33-.821-3.397-2.407-3.397-.496,0-1.031,.239-1.337,.61-.325,.388-.42,.883-.42,1.358 0,1.236 .745,3.287 2.388,3.287 .476,.009 .991-.212 1.298-.507m-1.248,3.491c0,0-1.062,.092-1.865,.354-.419,.146-1.529,.535-1.529,1.854 0,1.312 1.318,2.252 3.362,2.252 1.833,0 2.809-.852 2.809-1.994 0-.938-.92-1.893-2.083-2.438-.219-.003-.694-.028-.694-.028zm2.426-7.942c.321,.381 .98,.987 .98,2.252 0,1.367-.804,2.014-1.604,2.623-.248,.239-.535,.498-.535,.905 0,.406 .287,.63 .496,.793l.688,.519c.841,.687 1.592,1.312 1.592,2.588 0,1.736-1.728,3.408-5.011,3.408-2.771,0-3.949-1.189-3.949-2.561 0-.666 .185-1.744 1.312-2.396 1.185-.695 2.536-.771 3.394-.814-.268-.333-.318-.575-.318-1.147 0-.313 .098-.5 .193-.723-.211,.02-.422,.037-.613,.037-2.024,0-3.171-1.459-3.171-2.898 0-.852 .403-1.793 1.223-2.477 1.089-.867 2.388-1.021 3.418-1.021h3.521l-.682,.904h-.937l.003,.008z"/><path d="m6.165,5.363c.438-.427 .478-1.019 .478-1.351 0-1.33-.821-3.397-2.407-3.397-.496,0-1.031,.239-1.337,.61-.325,.388-.42,.883-.42,1.358 0,1.236 .745,3.287 2.388,3.287 .476,.009 .991-.212 1.298-.507m-1.248,3.491c0,0-1.062,.092-1.865,.354-.419,.146-1.529,.535-1.529,1.854 0,1.312 1.318,2.252 3.362,2.252 1.833,0 2.809-.852 2.809-1.994 0-.938-.92-1.893-2.083-2.438-.219-.003-.694-.028-.694-.028zm2.426-7.942c.321,.381 .98,.987 .98,2.252 0,1.367-.804,2.014-1.604,2.623-.248,.239-.535,.498-.535,.905 0,.406 .287,.63 .496,.793l.688,.519c.841,.687 1.592,1.312 1.592,2.588 0,1.736-1.677,3.408-4.96,3.408-2.771,0-4-1.189-4-2.561 0-.666 .185-1.744 1.312-2.396 1.185-.695 2.536-.771 3.394-.814-.268-.333-.318-.575-.318-1.147 0-.313 .098-.5 .193-.723-.211,.02-.422,.037-.613,.037-2.024,0-3.171-1.459-3.171-2.898 0-.852 .403-1.793 1.223-2.477 1.089-.867 2.388-1.021 3.418-1.021h3.521l-.682,.904h-.937l.003,.008z"/><path d="M15,4h-2v2h-2v2h2v2h2V8h2V6h-2V4z M18.004,2v2h2v8h1.987L22,1L18.004,2z"/></svg><div class="xuwmvb xuwmvb-Dy7EIf"></div></div></div><div class="GP"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" width="22px" height="22px" viewBox="-1.5555555555555554 -1.5555555555555554 17.11111111111111 17.11111111111111" class="u7 u7 iva"><g id="Q0N8Vc" fill="#aaaaaa" transform="rotate(0,7,7)"><path class="zVaWQ" d="M5.5,1.5h3v4h4v3h-4v4h-3v-4h-4v-3h4z"></path></g></svg><div class="C9sAve C9sAve-Dy7EIf"></div></div><div class="q7"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" width="20px" height="22px" viewBox="0 -2 20 22" class="u7 u7 hva"><path fill="#DD4B39" d="m19.8059,16.041-8.74-15.404c-.223-.394-.635-.637-1.078-.637-.443,0-.855,.243-1.078,.637l-8.739,15.404c-.227,.396-.227,.9-.005,1.299 .223,.398 .637,.66 1.283,.66h17.279c.445,0 .859-.262 1.082-.66 .22-.399 .22-.902-.004-1.299zm-9.798-1.041c-.552,0-1-.463-1-1.02 0-.555 .448-1.002 1-1.002 .552,0 1,.447 1,1.002-.001,.557-.448,1.02-1,1.02zm.999-9-.375,5h-1.25l-.374-5h.004l-.004-.02c0-.551 .448-.996 1-.996 .552,0 1,.449 1,1-.001,.007-.004,.016-.004,.016h.003z"/></svg><div class="tapvDe tapvDe-Dy7EIf"></div></div></div></div><div class="ap"><div class="iQa HI"><div id="aggregateCount" class="Oy">11M</div></div></div></span></div><script type="text/javascript">window['__P1_XP'] = {"UC":true,"UCP":true,"UH":true};</script></div><script>window.__GOOGLEAPIS = {googleapis: {versions: {pos: 'v1'}}};window['__P1_BASEURL'] = 'https:\/\/plusone.google.com\/'; window['__P1_LOCALE'] = 'en_US'; var OZ_domReady = 1;
+              var _DumpException = function(e) {
+                e['errsource'] = e['errsource'] || 'api_widget';
+                throw e;
+              }
+            window['___jsl'] = window['___jsl'] || {}; window['___jsl']['ci'] = [{"client":{"headers":{"response":["Cache-Control","Content-Disposition","Content-Encoding","Content-Language","Content-Length","Content-MD5","Content-Range","Content-Type","Date","ETag","Expires","Last-Modified","Location","Pragma","Range","Server","Transfer-Encoding","WWW-Authenticate","Vary","X-Goog-Safety-Content-Type","X-Goog-Safety-Encoding","X-Goog-Upload-Chunk-Granularity","X-Goog-Upload-Control-URL","X-Goog-Upload-Size-Received","X-Goog-Upload-Status","X-Goog-Upload-URL","X-Goog-Diff-Download-Range","X-Goog-Hash","X-Goog-Updated-Authorization","X-Server-Object-Version","X-Guploader-Customer","X-Guploader-Upload-Result","X-Guploader-Uploadid"],"request":["Accept","Accept-Language","Authorization","Cache-Control","Content-Disposition","Content-Encoding","Content-Language","Content-Length","Content-MD5","Content-Range","Content-Type","Date","GData-Version","Host","If-Match","If-Modified-Since","If-None-Match","If-Unmodified-Since","Origin","OriginToken","Pragma","Range","Slug","Transfer-Encoding","X-ClientDetails","X-GData-Client","X-GData-Key","X-Goog-AuthUser","X-Goog-PageId","X-Goog-Encode-Response-If-Executable","X-Goog-Correlation-Id","X-Goog-Request-Info","X-Goog-Experiments","x-goog-iam-role","x-goog-iam-authorization-token","X-Goog-Spatula","X-Goog-Upload-Command","X-Goog-Upload-Content-Disposition","X-Goog-Upload-Content-Length","X-Goog-Upload-Content-Type","X-Goog-Upload-File-Name","X-Goog-Upload-Offset","X-Goog-Upload-Protocol","X-Goog-Visitor-Id","X-HTTP-Method-Override","X-JavaScript-User-Agent","X-Pan-Versionid","X-Origin","X-Referer","X-Upload-Content-Length","X-Upload-Content-Type","X-Use-HTTP-Status-Code-Override","X-YouTube-VVT","X-YouTube-Page-CL","X-YouTube-Page-Timestamp"]},"rms":"migrated","cors":false},"llang":"en","plus_layer":"{\"isEnabled\":false}","enableMultilogin":true,"disableRealtimeCallback":false,"drive_share":{"useStandaloneSharingService":true},"isLoggedIn":false,"isPlusUser":false,"iframes":{"additnow":{"methods":["launchurl"],"url":"https://apis.google.com/additnow/additnow.html?usegapi\u003d1"},"person":{"url":":socialhost:/:session_prefix:_/widget/render/person?usegapi\u003d1"},"visibility":{"params":{"url":""},"url":":socialhost:/:session_prefix:_/widget/render/visibility?usegapi\u003d1"},"photocomments":{"url":":socialhost:/:session_prefix:_/widget/render/photocomments?usegapi\u003d1"},"plus_followers":{"params":{"url":""},"url":":socialhost:/_/im/_/widget/render/plus/followers?usegapi\u003d1"},"playreview":{"url":"https://play.google.com/store/ereview?usegapi\u003d1"},"share":{"url":":socialhost:/:session_prefix::im_prefix:_/widget/render/share?usegapi\u003d1"},"signin":{"methods":["onauth"],"params":{"url":""},"url":":socialhost:/:session_prefix:_/widget/render/signin?usegapi\u003d1"},"commentcount":{"url":":socialhost:/:session_prefix:_/widget/render/commentcount?usegapi\u003d1"},"page":{"url":":socialhost:/:session_prefix:_/widget/render/page?usegapi\u003d1"},"plus_circle":{"params":{"url":""},"url":":socialhost:/:session_prefix::se:_/widget/plus/circle?usegapi\u003d1"},"hangout":{"url":"https://talkgadget.google.com/:session_prefix:talkgadget/_/widget"},"youtube":{"methods":["scroll","openwindow"],"params":{"location":["search","hash"]},"url":":socialhost:/:session_prefix:_/widget/render/youtube?usegapi\u003d1"},"evwidget":{"params":{"url":""},"url":":socialhost:/:session_prefix:_/events/widget?usegapi\u003d1"},"card":{"url":":socialhost:/:session_prefix:_/hovercard/card"},"zoomableimage":{"url":"https://ssl.gstatic.com/microscope/embed/"},"reportabuse":{"params":{"url":""},"url":":socialhost:/:session_prefix:_/widget/render/reportabuse?usegapi\u003d1"},"follow":{"url":":socialhost:/:session_prefix:_/widget/render/follow?usegapi\u003d1"},"shortlists":{"url":""},"plus":{"url":":socialhost:/:session_prefix:_/widget/render/badge?usegapi\u003d1"},"post":{"params":{"url":""},"url":":socialhost:/:session_prefix::im_prefix:_/widget/render/post?usegapi\u003d1"},":socialhost:":"https://apis.google.com","configurator":{"url":":socialhost:/:session_prefix:_/plusbuttonconfigurator?usegapi\u003d1"},"community":{"url":":ctx_socialhost:/:session_prefix::im_prefix:_/widget/render/community?usegapi\u003d1"},"rbr_s":{"params":{"url":""},"url":":socialhost:/:session_prefix::se:_/widget/render/recobarsimplescroller"},":gplus_url:":"https://plus.google.com","autocomplete":{"params":{"url":""},"url":":socialhost:/:session_prefix:_/widget/render/autocomplete"},"plus_share":{"params":{"url":""},"url":":socialhost:/:session_prefix::se:_/+1/sharebutton?plusShare\u003dtrue\u0026usegapi\u003d1"},":source:":"3p","blogger":{"methods":["scroll","openwindow"],"params":{"location":["search","hash"]},"url":":socialhost:/:session_prefix:_/widget/render/blogger?usegapi\u003d1"},"rbr_i":{"params":{"url":""},"url":":socialhost:/:session_prefix::se:_/widget/render/recobarinvitation"},"savetowallet":{"url":"https://clients5.google.com/s2w/o/savetowallet"},"appcirclepicker":{"url":":socialhost:/:session_prefix:_/widget/render/appcirclepicker"},"udc_webconsentflow":{"params":{"url":""},"url":"https://www.google.com/settings/webconsent?usegapi\u003d1"},":im_socialhost:":"https://plus.googleapis.com","savetodrive":{"methods":["save"],"url":"https://drive.google.com/savetodrivebutton?usegapi\u003d1"},":signuphost:":"https://plus.google.com","ytshare":{"params":{"url":""},"url":":socialhost:/:session_prefix:_/widget/render/ytshare?usegapi\u003d1"},"plusone":{"params":{"count":"","url":"","size":""},"url":":socialhost:/:session_prefix::se:_/+1/fastbutton?usegapi\u003d1"},"comments":{"methods":["scroll","openwindow"],"params":{"location":["search","hash"]},"url":":socialhost:/:session_prefix:_/widget/render/comments?usegapi\u003d1"},"ytsubscribe":{"url":"https://www.youtube.com/subscribe_embed?usegapi\u003d1"}},"debug":{"host":"https://apis.google.com","forceIm":false,"reportExceptionRate":0.05,"rethrowException":false},"deviceType":"desktop","lexps":[100,81,97,127,124,79,122,61,30,45],"inline":{"css":1},"report":{"apiRate":{"gapi\\.signin\\..*":0.05},"rate":0.001,"host":"https://apis.google.com","apis":["iframes\\..*","gadgets\\..*","gapi\\.appcirclepicker\\..*","gapi\\.auth\\..*","gapi\\.client\\..*"]},"oauth-flow":{"disableOpt":true,"usegapi":false,"authUrl":"https://accounts.google.com/o/oauth2/auth","proxyUrl":"https://accounts.google.com/o/oauth2/postmessageRelay","idpIframeUrl":"https://accounts.google.com/o/oauth2/iframe"},"include_granted_scopes":true,"csi":{"rate":0.01},"googleapis.config":{"auth":{"useFirstPartyAuthV2":false}}}];</script><script>(function(){var gapi=window.gapi=window.gapi||{};gapi._bs=new Date().getTime();(function(){var g=encodeURIComponent,h=window,k=decodeURIComponent,n="shift",p="replace",q="split",t="push",u="test",w="length",x="join";var D=h,E=document,aa=D.location,ba=function(){},ca=/\[native code\]/,F=function(a,b,c){return a[b]=a[b]||c},da=function(a){for(var b=0;b<this[w];b++)if(this[b]===a)return b;return-1},ea=function(a){a=a.sort();for(var b=[],c=void 0,d=0;d<a[w];d++){var e=a[d];e!=c&&b[t](e);c=e}return b},H=function(){var a;if((a=Object.create)&&ca[u](a))a=a(null);else{a={};for(var b in a)a[b]=void 0}return a},I=F(D,"gapi",{});var J;J=F(D,"___jsl",H());F(J,"I",0);F(J,"hel",10);var K=function(){var a=aa.href,b;if(J.dpo)b=J.h;else{b=J.h;var c=RegExp("([#].*&|[#])jsh=([^&#]*)","g"),d=RegExp("([?#].*&|[?#])jsh=([^&#]*)","g");if(a=a&&(c.exec(a)||d.exec(a)))try{b=k(a[2])}catch(e){}}return b},fa=function(a){var b=F(J,"PQ",[]);J.PQ=[];var c=b[w];if(0===c)a();else for(var d=0,e=function(){++d===c&&a()},f=0;f<c;f++)b[f](e)},L=function(a){return F(F(J,"H",H()),a,H())};var M=F(J,"perf",H()),N=F(M,"g",H()),ga=F(M,"i",H());F(M,"r",[]);H();H();var P=function(a,b,c){var d=M.r;"function"===typeof d?d(a,b,c):d[t]([a,b,c])},R=function(a,b,c){b&&0<b[w]&&(b=Q(b),c&&0<c[w]&&(b+="___"+Q(c)),28<b[w]&&(b=b.substr(0,28)+(b[w]-28)),c=b,b=F(ga,"_p",H()),F(b,c,H())[a]=(new Date).getTime(),P(a,"_p",c))},Q=function(a){return a[x]("__")[p](/\./g,"_")[p](/\-/g,"_")[p](/\,/g,"_")};var S=H(),T=[],U=function(a){throw Error("Bad hint"+(a?": "+a:""));};T[t](["jsl",function(a){for(var b in a)if(Object.prototype.hasOwnProperty.call(a,b)){var c=a[b];"object"==typeof c?J[b]=F(J,b,[]).concat(c):F(J,b,c)}if(b=a.u)a=F(J,"us",[]),a[t](b),(b=/^https:(.*)$/.exec(b))&&a[t]("http:"+b[1])}]);var ha=/^(\/[a-zA-Z0-9_\-]+)+$/,ia=/^[a-zA-Z0-9\-_\.,!]+$/,ja=/^gapi\.loaded_[0-9]+$/,ka=/^[a-zA-Z0-9,._-]+$/,oa=function(a,b,c,d){var e=a[q](";"),f=e[n](),m=S[f],l=null;m?l=m(e,b,c,d):U("no hint processor for: "+f);l||U("failed to generate load url");b=l;c=b.match(la);(d=b.match(ma))&&1===d[w]&&na[u](b)&&c&&1===c[w]||U("failed sanity: "+a);return l},qa=function(a,b,c,d){a=pa(a);ja[u](c)||U("invalid_callback");b=V(b);d=d&&d[w]?V(d):null;var e=function(a){return g(a)[p](/%2C/g,",")};return[g(a.e)[p](/%2C/g,
+        ",")[p](/%2F/g,"/"),"/k=",e(a.version),"/m=",e(b),d?"/exm="+e(d):"","/rt=j/sv=1/d=1/ed=1",a.a?"/am="+e(a.a):"",a.c?"/rs="+e(a.c):"",a.d?"/t="+e(a.d):"","/cb=",e(c)][x]("")},pa=function(a){"/"!==a.charAt(0)&&U("relative path");for(var b=a.substring(1)[q]("/"),c=[];b[w];){a=b[n]();if(!a[w]||0==a.indexOf("."))U("empty/relative directory");else if(0<a.indexOf("=")){b.unshift(a);break}c[t](a)}a={};for(var d=0,e=b[w];d<e;++d){var f=b[d][q]("="),m=k(f[0]),l=k(f[1]);2==f[w]&&m&&l&&(a[m]=a[m]||l)}b="/"+c[x]("/");
+        ha[u](b)||U("invalid_prefix");c=W(a,"k",!0);d=W(a,"am");e=W(a,"rs");a=W(a,"t");return{e:b,version:c,a:d,c:e,d:a}},V=function(a){for(var b=[],c=0,d=a[w];c<d;++c){var e=a[c][p](/\./g,"_")[p](/-/g,"_");ka[u](e)&&b[t](e)}return b[x](",")},W=function(a,b,c){a=a[b];!a&&c&&U("missing: "+b);if(a){if(ia[u](a))return a;U("invalid: "+b)}return null},na=/^https?:\/\/[a-z0-9_.-]+\.google\.com(:\d+)?\/[a-zA-Z0-9_.,!=\-\/]+$/,ma=/\/cb=/g,la=/\/\//g,ra=/^\/[a-z_]+\//,sa=function(){var a=K();if(!a)throw Error("Bad hint");
+        return a};S.m=function(a,b,c,d){(a=a[0])||U("missing_hint");return"https://apis.google.com"+qa(a,b,c,d)};var X=decodeURI("%73cript"),Y=function(a,b){for(var c=[],d=0;d<a[w];++d){var e=a[d];e&&0>da.call(b,e)&&c[t](e)}return c},ta=function(a){"loading"!=E.readyState?Z(a):E.write("<"+X+' src="'+encodeURI(a)+'"></'+X+">")},Z=function(a){ua(a)},ua=function(a){var b=E.createElement(X);b.setAttribute("src",a);b.async="true";(a=E.getElementsByTagName(X)[0])?a.parentNode.insertBefore(b,a):(E.head||E.body||E.documentElement).appendChild(b)},va=function(a,b){var c=b&&b._c;if(c)for(var d=0;d<T[w];d++){var e=T[d][0],
+        f=T[d][1];f&&Object.prototype.hasOwnProperty.call(c,e)&&f(c[e],a,b)}},xa=function(a,b){wa(function(){var c;c=b===K()?F(I,"_",H()):H();c=F(L(b),"_",c);a(c)})},za=function(a,b){var c=b||{};"function"==typeof b&&(c={},c.callback=b);va(a,c);var d=a?a[q](":"):[],e=c.h||sa(),f=F(J,"ah",H());if(f["::"]&&d[w]){for(var m=[],l=null;l=d[n]();){var r=l[q]("."),r=f[l]||f[r[1]&&"ns:"+r[0]||""]||e,y=m[w]&&m[m[w]-1]||null,B=y;y&&y.hint==r||(B={hint:r,b:[]},m[t](B));B.b[t](l)}var C=m[w];if(1<C){var G=c.callback;G&&
+        (c.callback=function(){0==--C&&G()})}for(;d=m[n]();)ya(d.b,c,d.hint)}else ya(d||[],c,e)},ya=function(a,b,c){a=ea(a)||[];var d=b.callback,e=b.config,f=b.timeout,m=b.ontimeout,l=null,r=!1;if(f&&!m||!f&&m)throw"Timeout requires both the timeout parameter and ontimeout parameter to be set";var y=F(L(c),"r",[]).sort(),B=F(L(c),"L",[]).sort(),C=[].concat(y),G=function(a,b){if(r)return 0;D.clearTimeout(l);B[t].apply(B,v);var d=((I||{}).config||{}).update;d?d(e):e&&F(J,"cu",[])[t](e);if(b){R("me0",a,C);try{xa(b,
+        c)}finally{R("me1",a,C)}}return 1};0<f&&(l=D.setTimeout(function(){r=!0;m()},f));var v=Y(a,B);if(v[w]){var v=Y(a,y),z=F(J,"CP",[]),A=z[w];z[A]=function(a){if(!a)return 0;R("ml1",v,C);var b=function(b){z[A]=null;G(v,a)&&fa(function(){d&&d();b()})},c=function(){var a=z[A+1];a&&a()};0<A&&z[A-1]?z[A]=function(){b(c)}:b(c)};if(v[w]){var O="loaded_"+J.I++;I[O]=function(a){z[A](a);I[O]=null};a=oa(c,v,"gapi."+O,y);y[t].apply(y,v);R("ml0",v,C);b.sync||D.___gapisync?ta(a):Z(a,b,O)}else z[A](ba)}else G(v)&&
+        d&&d()};var wa=function(a){if(J.hee&&0<J.hel)try{return a()}catch(b){J.hel--,za("debug_error",function(){try{h.___jsl.hefn(b)}catch(a){throw b;}})}else return a()};I.load=function(a,b){return wa(function(){return za(a,b)})};var Aa=/^(\/\* JS \*\/ ){0,1}gapi.loaded_\d+\(/,Ba=function(a,b,c,d){(d=d.before_eval_cb)&&d();D.execScript?D.execScript(b,"JavaScript"):c?a.eval(b):(a=a.document,c=a.createElement("script"),c.defer=!1,c.appendChild(a.createTextNode(b)),a.body.appendChild(c),a.body.removeChild(c))},Ca=function(a,b,c,d){var e=D.XMLHttpRequest;a=a[p](/^https?:\/\/[^\/]+\//,"/");if(!ra[u](a))throw"Bad URL "+a;var f=new e;f.open("GET",a,!0);f.onreadystatechange=function(){if(4===f.readyState)if(200===f.status){var e=
+        f.responseText,l=b.src_cb;l&&l();var r=!1;h.GAPI_EVAL&&(e+="\n//@ sourceURL="+encodeURI(a),r=!0);l=function(){if(Aa[u](e))Ba(D,e,r,b);else I[c](function(){Ba(this,e,r,b)})};d?d(l):l()}else throw"Error requesting "+a+": "+f.statusText+"\nCurrent location: "+location.href;};f.send(null)};var Da="mousemove mouseover mousedown click touchstart keydown focus resize".split(" "),Ea=["onmouseover","onmousedown","onkeydown","onfocusin"],Fa=function(){if(F(J,"LI",!1))return!0;J.LI=!0;return!1},Ga=0,Ha=function(){J.LE=!0;for(var a=J.LQ,b=0;a&&b<a[w];b++)(0,a[b])();J.LQ=null},Ia=function(){function a(a){for(var d=0;d<Da[w];d++)D[a+"EventListener"](Da[d],b,!0)}if(!Fa()){var b=function(b){"resize"==b.type&&2>++Ga||(a("remove"),Ha())};a("add")}},Ja=function(){function a(a){for(var d=0;d<Ea[w];d++)E[a+
+        "Event"](Ea[d],b)}if(!Fa()){var b=function(b){if(!("resize"==b.type&&2>++Ga)){a("detach");var d=E.createEventObject(b);Ha();d.srcElement.fireEvent("on"+d.type,d);b.cancelBubble=!0;b.stopPropagation&&b.stopPropagation()}};a("attach")}},Z=function(a,b,c){var d=!0;D.XMLHttpRequest&&!/\/widget\//[u](a)&&D.JSON?D.addEventListener?Ia():E.attachEvent&&E.createEventObject?Ja():d=!1:d=!1;d?Ca(a,b,c,function(a){J.LE?a():F(J,"LQ",[])[t](a)}):ua(a)};N.bs0=h.gapi._bs||(new Date).getTime();P("bs0");N.bs1=(new Date).getTime();P("bs1");delete h.gapi._bs;})();
+        gapi.load("",{callback:window["gapi_onload"],_c:{"jsl":{"ci":{"llang":"en","client":{"headers":{"response":["Cache-Control","Content-Disposition","Content-Encoding","Content-Language","Content-Length","Content-MD5","Content-Range","Content-Type","Date","ETag","Expires","Last-Modified","Location","Pragma","Range","Server","Transfer-Encoding","WWW-Authenticate","Vary","X-Goog-Safety-Content-Type","X-Goog-Safety-Encoding","X-Goog-Upload-Chunk-Granularity","X-Goog-Upload-Control-URL","X-Goog-Upload-Size-Received","X-Goog-Upload-Status","X-Goog-Upload-URL","X-Goog-Diff-Download-Range","X-Goog-Hash","X-Goog-Updated-Authorization","X-Server-Object-Version","X-Guploader-Customer","X-Guploader-Upload-Result","X-Guploader-Uploadid"],"request":["Accept","Accept-Language","Authorization","Cache-Control","Content-Disposition","Content-Encoding","Content-Language","Content-Length","Content-MD5","Content-Range","Content-Type","Date","GData-Version","Host","If-Match","If-Modified-Since","If-None-Match","If-Unmodified-Since","Origin","OriginToken","Pragma","Range","Slug","Transfer-Encoding","X-ClientDetails","X-GData-Client","X-GData-Key","X-Goog-AuthUser","X-Goog-PageId","X-Goog-Encode-Response-If-Executable","X-Goog-Correlation-Id","X-Goog-Request-Info","X-Goog-Experiments","x-goog-iam-role","x-goog-iam-authorization-token","X-Goog-Spatula","X-Goog-Upload-Command","X-Goog-Upload-Content-Disposition","X-Goog-Upload-Content-Length","X-Goog-Upload-Content-Type","X-Goog-Upload-File-Name","X-Goog-Upload-Offset","X-Goog-Upload-Protocol","X-Goog-Visitor-Id","X-HTTP-Method-Override","X-JavaScript-User-Agent","X-Pan-Versionid","X-Origin","X-Referer","X-Upload-Content-Length","X-Upload-Content-Type","X-Use-HTTP-Status-Code-Override","X-YouTube-VVT","X-YouTube-Page-CL","X-YouTube-Page-Timestamp"]},"rms":"migrated","cors":false},"plus_layer":{"isEnabled":false},"enableMultilogin":true,"drive_share":{"useStandaloneSharingService":true},"disableRealtimeCallback":false,"isLoggedIn":false,"iframes":{"additnow":{"methods":["launchurl"],"url":"https://apis.google.com/additnow/additnow.html?usegapi\u003d1"},"person":{"url":":socialhost:/:session_prefix:_/widget/render/person?usegapi\u003d1"},"visibility":{"params":{"url":""},"url":":socialhost:/:session_prefix:_/widget/render/visibility?usegapi\u003d1"},"photocomments":{"url":":socialhost:/:session_prefix:_/widget/render/photocomments?usegapi\u003d1"},"plus_followers":{"params":{"url":""},"url":":socialhost:/_/im/_/widget/render/plus/followers?usegapi\u003d1"},"playreview":{"url":"https://play.google.com/store/ereview?usegapi\u003d1"},"signin":{"methods":["onauth"],"params":{"url":""},"url":":socialhost:/:session_prefix:_/widget/render/signin?usegapi\u003d1"},"share":{"url":":socialhost:/:session_prefix::im_prefix:_/widget/render/share?usegapi\u003d1"},"commentcount":{"url":":socialhost:/:session_prefix:_/widget/render/commentcount?usegapi\u003d1"},"page":{"url":":socialhost:/:session_prefix:_/widget/render/page?usegapi\u003d1"},"hangout":{"url":"https://talkgadget.google.com/:session_prefix:talkgadget/_/widget"},"plus_circle":{"params":{"url":""},"url":":socialhost:/:session_prefix::se:_/widget/plus/circle?usegapi\u003d1"},"youtube":{"methods":["scroll","openwindow"],"params":{"location":["search","hash"]},"url":":socialhost:/:session_prefix:_/widget/render/youtube?usegapi\u003d1"},"zoomableimage":{"url":"https://ssl.gstatic.com/microscope/embed/"},"card":{"url":":socialhost:/:session_prefix:_/hovercard/card"},"evwidget":{"params":{"url":""},"url":":socialhost:/:session_prefix:_/events/widget?usegapi\u003d1"},"reportabuse":{"params":{"url":""},"url":":socialhost:/:session_prefix:_/widget/render/reportabuse?usegapi\u003d1"},"follow":{"url":":socialhost:/:session_prefix:_/widget/render/follow?usegapi\u003d1"},"shortlists":{"url":""},"plus":{"url":":socialhost:/:session_prefix:_/widget/render/badge?usegapi\u003d1"},"configurator":{"url":":socialhost:/:session_prefix:_/plusbuttonconfigurator?usegapi\u003d1"},":socialhost:":"https://apis.google.com","post":{"params":{"url":""},"url":":socialhost:/:session_prefix::im_prefix:_/widget/render/post?usegapi\u003d1"},"community":{"url":":ctx_socialhost:/:session_prefix::im_prefix:_/widget/render/community?usegapi\u003d1"},":gplus_url:":"https://plus.google.com","rbr_s":{"params":{"url":""},"url":":socialhost:/:session_prefix::se:_/widget/render/recobarsimplescroller"},"autocomplete":{"params":{"url":""},"url":":socialhost:/:session_prefix:_/widget/render/autocomplete"},"plus_share":{"params":{"url":""},"url":":socialhost:/:session_prefix::se:_/+1/sharebutton?plusShare\u003dtrue\u0026usegapi\u003d1"},":source:":"3p","blogger":{"methods":["scroll","openwindow"],"params":{"location":["search","hash"]},"url":":socialhost:/:session_prefix:_/widget/render/blogger?usegapi\u003d1"},"savetowallet":{"url":"https://clients5.google.com/s2w/o/savetowallet"},"rbr_i":{"params":{"url":""},"url":":socialhost:/:session_prefix::se:_/widget/render/recobarinvitation"},"appcirclepicker":{"url":":socialhost:/:session_prefix:_/widget/render/appcirclepicker"},"udc_webconsentflow":{"params":{"url":""},"url":"https://www.google.com/settings/webconsent?usegapi\u003d1"},"savetodrive":{"methods":["save"],"url":"https://drive.google.com/savetodrivebutton?usegapi\u003d1"},":im_socialhost:":"https://plus.googleapis.com","ytshare":{"params":{"url":""},"url":":socialhost:/:session_prefix:_/widget/render/ytshare?usegapi\u003d1"},":signuphost:":"https://plus.google.com","plusone":{"params":{"count":"","size":"","url":""},"url":":socialhost:/:session_prefix::se:_/+1/fastbutton?usegapi\u003d1"},"comments":{"methods":["scroll","openwindow"],"params":{"location":["search","hash"]},"url":":socialhost:/:session_prefix:_/widget/render/comments?usegapi\u003d1"},"ytsubscribe":{"url":"https://www.youtube.com/subscribe_embed?usegapi\u003d1"}},"isPlusUser":false,"debug":{"host":"https://apis.google.com","forceIm":false,"reportExceptionRate":0.05,"rethrowException":false},"deviceType":"desktop","inline":{"css":1},"lexps":[100,81,97,127,124,79,122,61,30,45],"include_granted_scopes":true,"oauth-flow":{"usegapi":false,"disableOpt":true,"authUrl":"https://accounts.google.com/o/oauth2/auth","proxyUrl":"https://accounts.google.com/o/oauth2/postmessageRelay","idpIframeUrl":"https://accounts.google.com/o/oauth2/iframe"},"report":{"apiRate":{"gapi\\.signin\\..*":0.05},"host":"https://apis.google.com","rate":0.001,"apis":["iframes\\..*","gadgets\\..*","gapi\\.appcirclepicker\\..*","gapi\\.auth\\..*","gapi\\.client\\..*"]},"csi":{"rate":0.01},"googleapis.config":{"auth":{"useFirstPartyAuthV2":false}}},"h":"m;/_/scs/apps-static/_/js/k\u003doz.gapi.en_US.rhF5yvMESo0.O/m\u003d__features__/am\u003dIQ/rt\u003dj/d\u003d1/t\u003dzcms/rs\u003dAGLTcCNgDOwdh5JDZNnuDpccRoxJFydRpg","u":"https://plusone.google.com/_/+1/fastbutton?url\u003dhttp://google.com","hee":true,"fp":"f7d8afe8ee25c3d31ffd7f208d75ad7e660f8ca1","dpo":false},"fp":"f7d8afe8ee25c3d31ffd7f208d75ad7e660f8ca1","annotation":["interactivepost","recobar","autocomplete","profile","signin2"],"bimodal":["signin","share"]}});var s = 'GAPI_INTERACTIVE'; window[s] = 'loading'; var c = 0; function cb() {if (++c == 2) {window[s] = 'interactive'; gapi.inline.ping('widget-interactive-' + window.name);}}gapi.load('googleapis.client,iframes-styles-bubble-internal,iframes', {'callback': function() {cb();var sw = window['__sw']; if (sw) {sw();}var sz = __sp(); if (sz) {iframes.ready(sz, {'canAutoClose': function() {var f = window['__CAN_AUTOCLOSE_BUBBLE']; return f ? f() : true;}, 'showSharebox': function() {var f = window['__SHOW_SHAREBOX']; return f ? f() : false;}});}}, 'src_cb': cb, 'before_eval_cb': function() {gapi.inline.tick('wje0', new Date().getTime());}});gapi.load('p1b,p1p', {'h': 'm;\/_\/scs\/apps-static\/_\/js\/k\x3doz.plusone.en_US.PH2K4T6R8Xw.O\/m\x3dp1b,p1p\/rt\x3dj\/d\x3d1\/t\x3dzcms\/rs\x3dAGLTcCPutGWkp0nc2HeI_31uRDWtZjPi3A','callback': function() {cb();gapi.inline.tick('wje1', new Date().getTime());}, 'src_cb': cb});})(); gapi_sendRenderStart();</script></body></html>
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 03:12:40 GMT
+- request:
+    method: get
+    uri: http://graph.facebook.com/?id=http://google.com
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fb-Rev:
+      - '1681606'
+      Etag:
+      - '"523448c3a7520f974c21df595817ef80012b47d0"'
+      Pragma:
+      - no-cache
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Facebook-Api-Version:
+      - v1.0
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      X-Fb-Debug:
+      - O/Z1lCZvTpYETBVJgQKJTuMKAjXHbzMQOS8c91nu1aaSXexp9i3XooA4mprgA6OxoAjex+zrGCxKWaHtIWS5Zw==
+      Date:
+      - Thu, 09 Apr 2015 03:12:40 GMT
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '63'
+    body:
+      encoding: UTF-8
+      string: '{"id":"http:\/\/google.com","shares":12081903,"comments":10121}'
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 03:12:40 GMT
+recorded_with: VCR 2.9.3

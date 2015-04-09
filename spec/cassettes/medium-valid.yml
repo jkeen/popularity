@@ -1,0 +1,110 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://medium.com/p/64ed463c02f0/upvotes
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 09 Apr 2015 17:30:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - 'default-src ''self''; connect-src https://localhost https://fierce-escarpment-8017.herokuapp.com
+        https://*.instapaper.com https://getpocket.com https://medium.com:443 https://*.medium.com:443
+        https://medium.com https://*.medium.com https://*.algolia.io ''self''; font-src
+        data: https://*.amazonaws.com https://*.gstatic.com https://dnqgz544uhbo8.cloudfront.net
+        https://use.typekit.net ''self''; frame-src chromenull: https: webviewprogressproxy:
+        ''self''; img-src blob: data: https: ''self''; media-src https://*.cdn.vine.co
+        https://d1fcbxp97j4nb2.cloudfront.net https://gomiro.medium.com ''self'';
+        object-src ''self''; script-src ''unsafe-eval'' ''unsafe-inline'' about: https:
+        ''self''; style-src ''unsafe-inline'' data: https: ''self''; report-uri https://csp.medium.com'
+      X-Frame-Options:
+      - sameorigin
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Ua-Compatible:
+      - IE=edge, Chrome=1
+      X-Powered-By:
+      - Kale
+      X-Obvious-Tid:
+      - 1428600621828:3a0865cdaf37
+      X-Obvious-Info:
+      - 15088-762523b,c5632d5
+      Link:
+      - <https://medium.com/humans.txt>; rel="humans"
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Expires:
+      - Thu, 09 Sep 1999 09:09:09 GMT
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - sid=1:qpfcm5EGZ/UBP+85q/0LVlMZBYzs7hIusc/QDwRJZ7ZHV47SeyYuxYTQjMFejscu; expires=Fri,
+        08 Apr 2016 17:30:21 GMT; path=/; domain=.medium.com; secure; httponly
+      - uid=lo_8bb00171f97c; expires=Fri, 08 Apr 2016 17:30:21 GMT; path=/; domain=.medium.com;
+        secure; httponly
+      Strict-Transport-Security:
+      - max-age=15811200; includeSubDomains
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version: 
+  recorded_at: Thu, 09 Apr 2015 17:30:22 GMT
+recorded_with: VCR 2.9.3

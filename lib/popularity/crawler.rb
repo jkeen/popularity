@@ -26,7 +26,7 @@ module Popularity
       true
     end
 
-    def eligible? 
+    def valid? 
       true # to be overridden in subclasses
     end
 
@@ -46,7 +46,13 @@ module Popularity
       self.class.to_s.split('::').last.gsub(/(.)([A-Z])/,'\1_\2').downcase
     end
 
+    def to_json
+      {@url => as_json}
+    end
+
     def fetch_async(&block)
+      return false unless valid?
+
       Unirest.get(request_url) do |response|
         @async_done = true
         @response = response.raw_body
@@ -55,6 +61,8 @@ module Popularity
     end
 
     def fetch
+      return false unless valid?
+        
       begin
         response = Unirest.get(request_url)
         @response = response.raw_body

@@ -4,7 +4,7 @@ module Popularity
       response_json["payload"]["value"]["count"]
     end
 
-    def info
+    def as_json
       {:recommends => recommends}
     end
 
@@ -12,7 +12,7 @@ module Popularity
       recommends
     end
     
-    def eligible?
+    def valid?
       host == 'medium.com'
     end
 

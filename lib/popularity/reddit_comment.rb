@@ -4,7 +4,7 @@ module Popularity
       response_json[1]["data"]["children"][0]["data"]["score"] 
     end
 
-    def info 
+    def as_json 
       {:score => score}
     end
 
@@ -12,7 +12,7 @@ module Popularity
       score
     end
 
-    def eligible?
+    def valid?
       return false unless host == 'reddit.com'
       
       path = URI.parse(@url).path

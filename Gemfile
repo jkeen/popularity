@@ -9,7 +9,7 @@ gem 'unirest'
 
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
-group :development do
+group :development, :test do
   gem "pry"
   gem "shoulda", ">= 0"
   gem "rdoc", "~> 3.12"
@@ -17,4 +17,10 @@ group :development do
   gem "jeweler", "~> 2.0.1"
   gem "simplecov", ">= 0"
   gem 'awesome_print'
+end
+
+group :test do
+  gem "rspec"
+  gem "vcr"
+  gem "webmock"
 end

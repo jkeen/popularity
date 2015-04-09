@@ -1,33 +1,51 @@
 module Popularity
   class RedditShare < Crawler
-    def score
-      return unless has_response?
-      response_json["data"]["children"].collect do |child|
-        child["data"]["score"]
+    include Popularity::ContainerMethods
+
+    class RedditResult < Popularity::RedditPost
+      def initialize(url, r)
+        super(url)
+        @response = r
+
+        self
+      end
+
+      def has_response?
+        true
+      end
+
+      def valid?
+        URI.parse(@url).host
+      end
+
+      def fetch
+        false
+      end
+
+      def fetch_async
+        false
       end
     end
 
-    def comment_count
-      return unless has_response?
+    def initialize(*args)
+      super(*args)
+      posts_json = response_json["data"]["children"]
+      posts_json.each do |child|
+        new_json = response_json.clone
 
-      response_json["data"]["children"].collect do |child|
-        child["data"]["num_comments"]
+        new_json["data"]["children"] = [child]
+        url = "http://reddit.com/#{child["data"]["permalink"]}"
+        post = RedditResult.new(url, JSON.dump([new_json]))
+
+        self.add_result(post)
       end
-    end
 
-    def info 
-      {:score => score, :comments => comment_count}
-    end
-
-    def total
-      comment_count.reduce(:+).to_i + score.reduce(:+).to_i
+      self
     end
 
     def name
       "reddit"
     end
-
-    protected
 
     def request_url
       "http://www.reddit.com/r/search/search.json?q=url:#{@url}"
