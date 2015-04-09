@@ -42,6 +42,7 @@ Gem::Specification.new do |s|
     "lib/popularity/search.rb",
     "lib/popularity/soundcloud.rb",
     "lib/popularity/twitter.rb",
+    "popularity.gemspec",
     "spec/cassettes/facebook.yml",
     "spec/cassettes/github-valid.yml",
     "spec/cassettes/google_plus.yml",
