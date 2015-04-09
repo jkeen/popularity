@@ -1,6 +1,6 @@
 # Popularity
 
-### Popularity searches social networks for urls and returns the numbers.
+### Popularity searches social networks for urls and returns the metrics.
 
 Current support includes: 
 

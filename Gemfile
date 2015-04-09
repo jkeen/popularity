@@ -1,26 +1,21 @@
 source "http://rubygems.org"
-# Add dependencies required to use your gem here.
-# Example:
-#   gem "activesupport", ">= 2.3.5"
 
-gem 'open_uri_redirections'
-gem 'json'
-gem 'unirest'
+gem 'open_uri_redirections', '~> 0'
+gem 'json', '~> 1.8'
+gem 'unirest', '~> 1'
 
-# Add dependencies to develop your gem here.
-# Include everything needed to run rake, tests, features, etc.
 group :development, :test do
-  gem "pry"
+  gem "pry", '~> 0.10'
   gem "shoulda", ">= 0"
   gem "rdoc", "~> 3.12"
   gem "bundler", "~> 1.0"
-  gem "jeweler", "~> 2.0.1"
-  gem "simplecov", ">= 0"
-  gem 'awesome_print'
+  gem "jeweler", "~> 2.0"
+  gem "simplecov", "~> 0"
+  gem 'awesome_print', '~> 1.6'
 end
 
 group :test do
-  gem "rspec"
-  gem "vcr"
-  gem "webmock"
+  gem "rspec", "~> 3.2"
+  gem "vcr", "~> 2.9"
+  gem "webmock", "~> 1.21"
 end

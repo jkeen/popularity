@@ -17,7 +17,7 @@ Jeweler::Tasks.new do |gem|
   gem.name = "popularity"
   gem.homepage = "http://github.com/jkeen/popularity"
   gem.license = "MIT"
-  gem.summary = %Q{Get social metrics for a URL}
+  gem.summary = %Q{Popularity searches social networks for urls and returns the metrics.L}
   gem.description = %Q{}
   gem.email = "jeff@keen.me"
   gem.authors = ["Jeff Keen"]

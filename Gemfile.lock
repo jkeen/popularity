@@ -111,16 +111,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  awesome_print
+  awesome_print (~> 1.6)
   bundler (~> 1.0)
-  jeweler (~> 2.0.1)
-  json
-  open_uri_redirections
-  pry
+  jeweler (~> 2.0)
+  json (~> 1.8)
+  open_uri_redirections (~> 0)
+  pry (~> 0.10)
   rdoc (~> 3.12)
-  rspec
+  rspec (~> 3.2)
   shoulda
-  simplecov
-  unirest
-  vcr
-  webmock
+  simplecov (~> 0)
+  unirest (~> 1)
+  vcr (~> 2.9)
+  webmock (~> 1.21)
