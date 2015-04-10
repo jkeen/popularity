@@ -23,11 +23,11 @@ Rubygems         | `downloads`                      | only for rubygems
 > search.facebook.shares    #=> share count
 > search.facebook.comments  #=> comment count
 > search.twitter.tweets     #=> tweet count
-> search.pinterest.pins    #=> pin count
-> search.reddit.posts     #=> post count
+> search.pinterests.pins    #=> pin count
+> search.reddit.posts       #=> post count
 > search.reddit.comments    #=> comment count across all posts
 > search.reddit.score       #=> reddit score total across all posts
-> search.total          #=> All of the above numbers added up
+> search.total              #=> All of the above numbers added up
 
 ```
 
@@ -40,11 +40,11 @@ Sometimes multiple URLs refer to the same thing. Maybe your URLs changed, but yo
 > search.facebook.shares    #=> share count across all urls
 > search.facebook.comments  #=> comment count across all urls
 > search.twitter.tweets     #=> tweet count across all urls
-> search.pinterest.pins    #=> pin count across all urls
-> search.reddit.posts     #=> post count across all urls
+> search.pinterests.pins    #=> pin count across all urls
+> search.reddit.posts       #=> post count across all urls
 > search.reddit.comments    #=> comment count across all posts and urls
 > search.reddit.score       #=> reddit score total across all posts and urls
-> search.total          #=> All of the above numbers added up
+> search.total              #=> All of the above numbers added up
 ```
 
 JSON: 
@@ -70,7 +70,7 @@ All of the searches done through Popularity.search are done asynchronously, but 
 To just query one network, interact with the class directly.
 
 ```ruby
-p = Popularity::RedditComment.new("http://www.reddit.com/r/:subreddit/comments/:id/:name/:comment")
+p = Popularity::RedditComment.new("http://www.reddit.com/r/path/to/reddit/comment")
 p.score #=> comment score
 ```
 
