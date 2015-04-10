@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rubygems.org/api/v1/gems/popularity.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip
+      User-Agent:
+      - unirest-ruby/1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 10 Apr 2015 17:38:06 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4b4d07a2-2c47-4f68-8165-491312f1fcfd
+      X-Runtime:
+      - '0.022088'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA42T247TMBCGX8XydUhzaLrZSjwAJ4kL7gBFjj1J3Dp2GNut
+        UFWenQndXRpWrbizZr45/TM+cStG4Fs+uSkagTr85AlX7miNE8rzbV0l/ADo
+        tbNEZWmW5gQ8WZp/wMmI0DkcicTYzplEDINDysPfQ9exDwCWrNp2jkyfX2oy
+        DwLlAJ55J7UwzEI4Otx7RulYROOZsIohhIjWszAAGyGglj79SPmMlmA9UJmv
+        /NO7L/x7wsktlAiCb0/nhPuBHjxX66Ir8gyKx/ZBqCyTWdm2XV5Um8e6bKEU
+        dVVVa9l28FCV2aao19DJtu5KUdQiK6nShG4HMjQRNSUcQpi2q9U8aw+jTx32
+        q/mxWqhJlv/n3/yROKUYqja4ESbRwzK812GIbSrduNrtSdBltaPe6wtvozHz
+        LmUcwQYRaIXXjlFoo23fGO2f5rkEeBdRQiOdeqp7MbexbwIKuQdcpIcJrAIr
+        9Sz/iSs4gHHTXJG2cXo+L3EET8M0E2pyJBzhR9QIMzYfx69vMctKYHm64efk
+        JaqNVhnAe3x2ze/gCHf5Il3wE843eqMXWsMCRlLyNl2meXHdih9cNEq8DrhM
+        +pYtcns9TgakO7zmn6Uhns4aow16/rB/pd15+po3p8jT+rotR9ua19cgKNJf
+        zkfhb0cvmoyWIvy97VGL5/Nv4rHkSVMEAAA=
+    http_version: 
+  recorded_at: Fri, 10 Apr 2015 17:38:06 GMT
+recorded_with: VCR 2.9.3

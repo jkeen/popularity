@@ -2,20 +2,21 @@
 require 'popularity/crawler'
 require 'popularity/search'
 require 'popularity/results_container'
-require 'popularity/facebook'
-require 'popularity/twitter'
-require 'popularity/pinterest'
-require 'popularity/google_plus'
-require 'popularity/medium'
-require 'popularity/reddit_post'
-require 'popularity/reddit_comment'
-require 'popularity/reddit_share'
-require 'popularity/soundcloud'
-require 'popularity/github'
 
 module Popularity
-  TYPES = [Facebook, Twitter, Pinterest, GooglePlus, RedditShare, RedditPost, RedditComment, Medium, Soundcloud, Github]
+  TYPES = []
+end
 
+Gem.find_files("popularity/networks/*.rb").each { |path| 
+  require path
+  file_name   = path.split('/').last.split('.').first
+  class_name  = file_name.gsub(/_[a-z]|^[a-z]/, &:upcase).gsub('_', '')
+
+  # Auto register the types in /networks
+  Popularity::TYPES << Object.const_get("Popularity::#{class_name}")
+}
+
+module Popularity
   def self.search(*urls)
   	response = {}
 

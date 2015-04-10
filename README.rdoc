@@ -15,6 +15,7 @@ Reddit Comments  | `score`                          | only for reddit comment ur
 Github           | `stars`                          | only for github repo urls     
 Medium           | `recommends`                     | only for medium posts          
 Soundcloud       | `plays`, `likes`, `comments`, `downloads` | only for soundcloud urls
+Rubygems         | `downloads`                      | only for rubygems
 
 ```ruby
 

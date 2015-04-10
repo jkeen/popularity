@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "popularity"
   gem.homepage = "http://github.com/jkeen/popularity"
   gem.license = "MIT"
-  gem.summary = %Q{Popularity searches social networks for urls and returns the metrics.L}
-  gem.description = %Q{}
+  gem.summary = %Q{Popularity searches social networks a url and returns the metrics.}
+  gem.description = %Q{Supports Facebook, Twitter, Pinterest, Reddit (Links, Posts, and Comments), Github, Soundcloud, Medium, and Rubygems}
   gem.email = "jeff@keen.me"
   gem.authors = ["Jeff Keen"]
   # dependencies defined in Gemfile
