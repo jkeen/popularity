@@ -44,4 +44,32 @@ module Popularity
       "#{@url}.json"
     end
   end
+
+  class RedditResult < RedditPost
+    # A stubbed out version of a RedditPost so RedditShare can 
+    # stub in the json response it already has
+
+    def initialize(url, r)
+      super(url)
+      @response = r
+
+      self
+    end
+
+    def has_response?
+      true
+    end
+
+    def valid?
+      URI.parse(@url).host
+    end
+
+    def fetch
+      false
+    end
+
+    def fetch_async
+      false
+    end
+  end
 end

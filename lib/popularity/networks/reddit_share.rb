@@ -1,31 +1,7 @@
+
 module Popularity
   class RedditShare < Crawler
     include Popularity::ContainerMethods
-
-    class RedditResult < Popularity::RedditPost
-      def initialize(url, r)
-        super(url)
-        @response = r
-
-        self
-      end
-
-      def has_response?
-        true
-      end
-
-      def valid?
-        URI.parse(@url).host
-      end
-
-      def fetch
-        false
-      end
-
-      def fetch_async
-        false
-      end
-    end
 
     def initialize(*args)
       super(*args)
