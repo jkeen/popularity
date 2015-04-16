@@ -1,7 +1,10 @@
 require 'bundler/setup'
 Bundler.setup
 
-require 'popularity' 
+require 'simplecov'
+SimpleCov.start
+
+require 'popularity'
 require 'vcr'
 
 VCR.configure { |c|
