@@ -3,7 +3,6 @@ module Popularity
     attr_accessor :info
     attr_accessor :results
     attr_accessor :sources
-    attr_reader :total
     attr_reader :url
 
     def initialize(url)
@@ -15,9 +14,7 @@ module Popularity
         network.fetch_async do |code, body|
           add_result(network)
           begin
-            if network.has_response?
-              total_score << network.total
-            end
+
           rescue Exception => e
             puts "#{network.name} had an accident"
             puts e.message
@@ -32,8 +29,6 @@ module Popularity
         #
         break if selected_types.all? { |network| network.async_done? }
       end
-
-      @total = total_score.reduce(:+)
     end
 
     def as_json(options ={})
@@ -49,6 +44,10 @@ module Popularity
       json["total"] = total
 
       json
+    end
+
+    def total
+      self.results.collect(&:total).compact.reduce(:+)
     end
 
     protected
@@ -69,6 +68,8 @@ module Popularity
 
       self.instance_variable_set "@#{result.name}", result
 
+      # if there's a facebook result, this class will
+      # have a facebook method returning it
       self.define_singleton_method(result.name.to_sym) { result }
     end
 

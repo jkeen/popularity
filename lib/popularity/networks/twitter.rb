@@ -1,15 +1,9 @@
 module Popularity
   class Twitter < Crawler
+    stats :tweets
+
     def tweets
       response_json['count'].to_i if has_response?
-    end
-
-    def total
-      tweets
-    end
-
-    def as_json(options = {})
-      {"tweets" => tweets}
     end
 
     protected

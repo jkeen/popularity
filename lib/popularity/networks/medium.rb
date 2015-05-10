@@ -1,17 +1,11 @@
 module Popularity
   class Medium < Crawler
+    stats :recommends
+
     def recommends
       response_json["payload"]["value"]["count"]
     end
 
-    def as_json(options = {})      
-      {"recommends" => recommends}
-    end
-
-    def total
-      recommends
-    end
-    
     def valid?
       host == 'medium.com'
     end

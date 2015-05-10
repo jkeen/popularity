@@ -1,16 +1,10 @@
 module Popularity
   class GooglePlus < Crawler
+    stats :plus_ones
+
     def plus_ones
-      matches = response.scan(/window.__SSR = {c\: (\d+.\d+E?\d+)/) 
+      matches = response.scan(/window.__SSR = {c\: (\d+.\d+E?\d+)/)
       matches.flatten.first.to_f.to_i
-    end
-
-    def as_json(options = {})
-      {"plus_ones" => plus_ones}
-    end
-
-    def total
-      plus_ones
     end
 
     protected

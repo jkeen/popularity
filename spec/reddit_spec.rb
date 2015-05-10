@@ -30,7 +30,7 @@ describe Popularity::RedditShare do
       let(:json) { subject.as_json }
 
       it "should include post count in json" do
-        expect(25).to eq(json["posts"])
+        expect(json["posts"]).to eq(25)
       end
 
       it "should comments in json" do
@@ -65,7 +65,7 @@ describe Popularity::RedditShare do
       end
 
       it "should have correct total" do
-        expect(subject.total).to eq(subject.score + subject.comments)
+        expect(subject.total).to eq(subject.score + subject.comments + subject.posts)
       end
 
       context "json" do

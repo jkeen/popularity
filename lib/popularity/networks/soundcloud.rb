@@ -1,5 +1,7 @@
 module Popularity
   class Soundcloud < Crawler
+    stats :plays, :likes, :comments, :downloads
+
     def plays
       response.scan(/\"soundcloud:play_count\" content=\"([0-9]*)\"/).flatten.first.to_f.to_i
     end
@@ -14,17 +16,6 @@ module Popularity
 
     def downloads
       response.scan(/\"soundcloud:download_count\" content=\"([0-9]*)\"/).flatten.first.to_f.to_i
-    end
-
-    def as_json(options = {})
-      {"plays" => plays,
-       "likes" => likes,
-       "comments" => comments,
-       "downloads" => downloads }
-    end
-
-    def total
-      plays + likes + downloads + comments
     end
 
     def valid?

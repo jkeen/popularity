@@ -18,8 +18,6 @@ Gem.find_files("popularity/networks/*.rb").each { |path|
 
 module Popularity
   def self.search(*urls)
-  	response = {}
-
     MultiSearch.new(:urls => urls)
   end
 
@@ -65,12 +63,7 @@ module Popularity
     end
 
     def total
-      total = 0
-      self.searches.each do |a|
-        total += a.total
-      end
-
-      total
+      self.searches.collect(&:total).compact.reduce(:+)
     end
 
     protected

@@ -2,10 +2,26 @@ require 'open-uri'
 require 'open_uri_redirections'
 require 'json'
 require 'unirest'
+require 'pry'
 
 module Popularity
   class Crawler
     attr_reader :url
+
+    def self.stats(*args)
+      @property_names ||= []
+      args.each do |name|
+        @property_names << name
+      end
+    end
+
+    def self.property_names
+      @property_names
+    end
+
+    def total
+      self.class.property_names.uniq.collect { |n| self.send(n.to_sym) }.select { |t| t.class == Fixnum }.compact.reduce(:+)
+    end
 
     def initialize(url)
       @url = url
@@ -49,7 +65,14 @@ module Popularity
     end
 
     def as_json(options = {})
-      as_json(options)
+      json = {}
+
+      self.class.property_names.each do |name|
+        json[name.to_s] = self.send(name.to_sym)
+      end
+
+      json["total"] = total
+      json
     end
 
     def fetch_async(&block)

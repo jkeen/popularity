@@ -1,17 +1,11 @@
 module Popularity
   class Rubygems < Crawler
+    stats :downloads
+
     def downloads
       response_json["downloads"]
     end
 
-    def as_json(options = {})      
-      {"downloads" => downloads}
-    end
-
-    def total
-      downloads
-    end
-    
     def valid?
       host == 'rubygems.org' && @url =~ /\/gems\//
     end

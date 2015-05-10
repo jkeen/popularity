@@ -1,7 +1,7 @@
-
 module Popularity
   class RedditShare < Crawler
     include Popularity::ContainerMethods
+    stats :comments, :score, :posts
 
     def initialize(*args)
       super(*args)
@@ -17,20 +17,6 @@ module Popularity
       end
 
       self
-    end
-
-    def as_json(options ={})
-      total = {"comments" => 0, "posts" => 0, "score" => 0}
-      return total unless @results
-
-      @results.collect(&:as_json).each do |json|
-        json.each do |key, value|
-            total[key] ||= 0
-            total[key] += value
-        end
-      end
-      total["posts"] = posts
-      total
     end
 
     def posts

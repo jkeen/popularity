@@ -1,8 +1,10 @@
 module Popularity
   class RedditPost < Crawler
+    stats :score, :comments
+
     def score
       begin
-        response_json[0]["data"]["children"][0]["data"]["score"] 
+        response_json[0]["data"]["children"][0]["data"]["score"]
       rescue
         0
       end
@@ -10,26 +12,15 @@ module Popularity
 
     def comments
       begin
-        response_json[0]["data"]["children"][0]["data"]["num_comments"] 
+        response_json[0]["data"]["children"][0]["data"]["num_comments"]
       rescue
         0
       end
     end
 
-    def as_json(options = {})      
-      {
-        "comments" => comments,
-        "score" => score
-      }
-    end
-
-    def total
-      comments + score
-    end
-
     def valid?
       return false unless host == 'reddit.com'
-      
+
       path = URI.parse(@url).path
       path.split('/').delete_if { |a| a.empty? }.size < 6
     end
@@ -46,11 +37,14 @@ module Popularity
   end
 
   class RedditResult < RedditPost
-    # A stubbed out version of a RedditPost so RedditShare can 
+    # A stubbed out version of a RedditPost so RedditShare can
     # stub in the json response it already has
+
+    stats :score, :comments
 
     def initialize(url, r)
       super(url)
+      @url = url
       @response = r
 
       self
@@ -58,6 +52,10 @@ module Popularity
 
     def has_response?
       true
+    end
+
+    def reddit_url
+      @url
     end
 
     def valid?

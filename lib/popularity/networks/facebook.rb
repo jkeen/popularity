@@ -1,5 +1,7 @@
 module Popularity
 	class Facebook < Crawler
+    stats :shares, :comments
+
     def shares
       response_json['shares'].to_f.to_i
     end
@@ -8,19 +10,10 @@ module Popularity
       response_json['comments'].to_f.to_i
     end
 
-    def as_json(options = {})
-      { "shares" => shares,
-        "comments" => comments }
-    end
-
-    def total
-       shares + comments
-    end
-
     protected
 
-		def request_url
-			"http://graph.facebook.com/?id=#{@url}"
-		end
-  end
+    def request_url
+     "http://graph.facebook.com/?id=#{@url}"
+   end
+ end
 end

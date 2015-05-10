@@ -1,10 +1,9 @@
-
 module Popularity
   module ContainerMethods
     def self.included(base)
       base.class_eval do
         def results
-          @results
+          @results || []
         end
 
         def add_result(result)
@@ -22,32 +21,42 @@ module Popularity
           end
         end
 
-        def as_json(options ={})
-          individual = {}
-          total = {}
-          @results.collect do |result|
-            json = result.as_json
-            individual[result.url] = json
+        def as_json(options = {})
+          result_property_names = []
+          results_json = self.results.collect do |r|
+            json = {}
 
-            json.each do |key, value|
-              next if key == "total"
-
-              if value.is_a?(Hash)
-                # RedditShare breaks out into separate results for each reddit link
-                # I'm not a big fan of this hacky stuff here
-                value.each do |k,v|
-                  total[k] ||= 0
-                  total[k] += v
-                end
-              else
-                total[key] ||= 0
-                total[key] += value
-              end
+            r.class.property_names.each do |name|
+              json[name.to_s] = self.send(name.to_sym)
             end
+
+            json["total"] = total
+
+            {r.url => json}
           end
 
-          individual["total"] = total
-          individual
+          json = aggregate_json
+          json["_results"] = results_json
+
+          json
+        end
+
+        def aggregate_json
+          json = {}
+
+          names = if self.class.respond_to?(:property_names)
+            self.class.property_names
+          else
+            self.results.first.class.property_names
+          end
+
+          names.each do |name|
+            json[name.to_s] = self.send(name.to_sym)
+          end
+
+          json["total"] = self.total
+
+          json
         end
 
         def method_missing(method_sym, *arguments, &block)
@@ -58,6 +67,8 @@ module Popularity
 
           if collection.all? { |t| t.is_a?(Fixnum) }
             collection.reduce(:+)
+          else
+            collection.flatten
           end
         end
       end

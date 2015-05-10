@@ -1,14 +1,8 @@
 module Popularity
   class Github < Crawler
+    stats :stars
+
     def stars
-      response_json.size
-    end
-
-    def as_json(options = {})      
-      { "stars" => stars }
-    end
-
-    def total
       response_json.size
     end
 
