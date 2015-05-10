@@ -17,9 +17,9 @@ describe Popularity::GooglePlus do
     end
 
     context "json" do
-      let(:json) { subject.to_json }
+      let(:json) { subject.as_json }
 
-      it "should have required attributes in json" do 
+      it "should have required attributes in json" do
         expect(subject.plus_ones).to eq(json["plus_ones"])
       end
     end

@@ -27,17 +27,17 @@ describe Popularity::RedditShare do
     end
 
     context "json" do
-      let(:json) { subject.to_json }
+      let(:json) { subject.as_json }
 
-      it "should include post count in json" do 
+      it "should include post count in json" do
         expect(25).to eq(json["posts"])
       end
 
-      it "should comments in json" do 
+      it "should comments in json" do
         expect(json["comments"]).to_not be_nil
       end
 
-      it "should score in json" do 
+      it "should score in json" do
         expect(json["score"]).to_not be_nil
       end
     end
@@ -69,17 +69,17 @@ describe Popularity::RedditShare do
       end
 
       context "json" do
-        let(:json) { subject.to_json }
+        let(:json) { subject.as_json }
 
-        it "should include post count in json" do 
+        it "should include post count in json" do
           expect(0).to eq(json["posts"])
         end
 
-        it "should comments in json" do 
+        it "should comments in json" do
           expect(0).to eq(json["comments"])
         end
 
-        it "should score in json" do 
+        it "should score in json" do
           expect(0).to eq(json["score"])
         end
 

@@ -7,7 +7,7 @@ module Popularity
   TYPES = []
 end
 
-Gem.find_files("popularity/networks/*.rb").each { |path| 
+Gem.find_files("popularity/networks/*.rb").each { |path|
   require path
   file_name   = path.split('/').last.split('.').first
   class_name  = file_name.gsub(/_[a-z]|^[a-z]/, &:upcase).gsub('_', '')
@@ -43,20 +43,20 @@ module Popularity
           add_search_result(result)
         end
       end
-    end 
+    end
 
     def results
       searches.collect(&:results).reduce(:+)
     end
 
-    def to_json(options = {})      
+    def as_json(options = {})
       json = {}
       self.searches.collect do |search|
-        json[search.url] = search.to_json
+        json[search.url] = search.as_json
       end
 
       self.sources.collect do |source|
-        json[source.to_s] = self.send(source.to_sym).to_json
+        json[source.to_s] = self.send(source.to_sym).as_json
       end
 
       json["total"] = total
@@ -76,11 +76,11 @@ module Popularity
     protected
 
     def add_search_result(result)
-      container = self.instance_variable_get("@#{result.name}") 
+      container = self.instance_variable_get("@#{result.name}")
 
       unless container
-        @sources ||= [] 
-        @sources << result.name.to_sym 
+        @sources ||= []
+        @sources << result.name.to_sym
         container = Popularity::ResultsContainer.new
         self.instance_variable_set "@#{result.name}", container
         self.define_singleton_method(result.name.to_sym) { container }

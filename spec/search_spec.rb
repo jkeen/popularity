@@ -13,21 +13,21 @@ describe Popularity::Search do
     end
 
     context "json" do
-      let(:json) { subject.to_json }
+      let(:json) { subject.as_json }
 
-      it "should have each url as root json key" do 
+      it "should have each url as root json key" do
         subject.sources.each do |source|
           expect(json[source.to_s]).to_not be_nil
         end
       end
 
-      it "should have each network as root json key" do 
+      it "should have each network as root json key" do
         subject.searches.each do |search|
           expect(json[search.url.to_s]).to_not be_nil
         end
       end
 
-      it "should have each total as root json key" do 
+      it "should have each total as root json key" do
         expect(json["total"]).to_not be_nil
       end
     end
@@ -57,21 +57,21 @@ describe Popularity::Search do
     end
 
     context "json" do
-      let(:json) { subject.to_json }
+      let(:json) { subject.as_json }
 
-      it "should have each url as root json key" do 
+      it "should have each url as root json key" do
         subject.sources.each do |source|
           expect(json[source.to_s]).to_not be_nil
         end
       end
 
-      it "should have each network as root json key" do 
+      it "should have each network as root json key" do
         subject.searches.each do |search|
           expect(json[search.url.to_s]).to_not be_nil
         end
       end
 
-      it "should have each total as root json key" do 
+      it "should have each total as root json key" do
         expect(json["total"]).to_not be_nil
       end
     end

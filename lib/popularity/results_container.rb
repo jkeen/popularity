@@ -22,18 +22,18 @@ module Popularity
           end
         end
 
-        def to_json(options ={})
+        def as_json(options ={})
           individual = {}
           total = {}
           @results.collect do |result|
-            json = result.to_json
+            json = result.as_json
             individual[result.url] = json
 
             json.each do |key, value|
               next if key == "total"
 
-              if value.is_a?(Hash) 
-                # RedditShare breaks out into separate results for each reddit link 
+              if value.is_a?(Hash)
+                # RedditShare breaks out into separate results for each reddit link
                 # I'm not a big fan of this hacky stuff here
                 value.each do |k,v|
                   total[k] ||= 0
@@ -42,7 +42,7 @@ module Popularity
               else
                 total[key] ||= 0
                 total[key] += value
-              end    
+              end
             end
           end
 
@@ -57,7 +57,7 @@ module Popularity
           end
 
           if collection.all? { |t| t.is_a?(Fixnum) }
-            collection.reduce(:+) 
+            collection.reduce(:+)
           end
         end
       end

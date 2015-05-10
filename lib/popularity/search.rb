@@ -14,7 +14,7 @@ module Popularity
       selected_types.each do |network|
         network.fetch_async do |code, body|
           add_result(network)
-          begin 
+          begin
             if network.has_response?
               total_score << network.total
             end
@@ -26,24 +26,24 @@ module Popularity
         end
       end
 
-      loop do 
-        # we want the requests to be asyncronous, but we don't 
+      loop do
+        # we want the requests to be asyncronous, but we don't
         # want gem users to have to deal with async code
-        # 
+        #
         break if selected_types.all? { |network| network.async_done? }
       end
 
       @total = total_score.reduce(:+)
     end
 
-    def to_json(options ={})
+    def as_json(options ={})
       json = {}
       self.results.collect do |result|
-        json[result.name.to_s] = result.to_json
+        json[result.name.to_s] = result.as_json
       end
 
       self.sources.collect do |source|
-        json[source.to_s] = self.send(source.to_sym).to_json
+        json[source.to_s] = self.send(source.to_sym).as_json
       end
 
       json["total"] = total

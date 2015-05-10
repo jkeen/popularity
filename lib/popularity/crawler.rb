@@ -22,13 +22,13 @@ module Popularity
     def has_response?
       response #fetch it
 
-      return false if response.nil? 
+      return false if response.nil?
       return false if response.empty?
 
       true
     end
 
-    def valid? 
+    def valid?
       true # to be overridden in subclasses
     end
 
@@ -48,7 +48,7 @@ module Popularity
       self.class.to_s.split('::').last.gsub(/(.)([A-Z])/,'\1_\2').downcase
     end
 
-    def to_json(options = {})
+    def as_json(options = {})
       as_json(options)
     end
 
@@ -58,13 +58,13 @@ module Popularity
       Unirest.get(request_url) do |response|
         @async_done = true
         @response = response.raw_body
-        block.call(response.code, response.raw_body) if block_given? 
+        block.call(response.code, response.raw_body) if block_given?
       end
     end
 
     def fetch
       return false unless valid?
-        
+
       begin
         response = Unirest.get(request_url)
         @response = response.raw_body

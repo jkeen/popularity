@@ -19,11 +19,11 @@ module Popularity
       self
     end
 
-    def to_json(options ={})
+    def as_json(options ={})
       total = {"comments" => 0, "posts" => 0, "score" => 0}
       return total unless @results
 
-      @results.collect(&:to_json).each do |json|
+      @results.collect(&:as_json).each do |json|
         json.each do |key, value|
             total[key] ||= 0
             total[key] += value

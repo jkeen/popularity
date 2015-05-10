@@ -50,7 +50,7 @@ Sometimes multiple URLs refer to the same thing. Maybe your URLs changed, but yo
 JSON: 
 
 ```ruby
-> search.to_json 
+> search.as_json 
 #=> spits out by network, by url, and total stats
 ```
 

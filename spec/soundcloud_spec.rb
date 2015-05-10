@@ -53,9 +53,9 @@ describe Popularity::Soundcloud do
     end
 
     context "json" do
-      let(:json) { subject.to_json }
+      let(:json) { subject.as_json }
 
-      it "should have required attributes in json" do 
+      it "should have required attributes in json" do
         [:plays, :likes, :downloads, :comments].each do |att|
           expect(subject.send(att)).to eq(json[att.to_s])
         end
