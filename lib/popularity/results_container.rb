@@ -27,10 +27,10 @@ module Popularity
             json = {}
 
             r.class.property_names.each do |name|
-              json[name.to_s] = self.send(name.to_sym)
+              json[name.to_s] = r.send(name.to_sym)
             end
 
-            json["total"] = total
+            json["total"] = r.total
 
             {r.url => json}
           end

@@ -24,14 +24,14 @@ describe Popularity::ResultsContainer do
       Popularity::ResultsContainer.new
     }
 
-    it "should reject differnt types" do
+    it "should reject different types" do
       subject.add_result Popularity::Facebook.new("http://google.com")
       expect(1).to equal(subject.results.size)
 
-      expect{ 
+      expect{
         subject.add_result(Popularity::Twitter.new("http://google.com"))
       } .to raise_error(TypeError)
-        
+
     end
   end
 
@@ -48,7 +48,7 @@ describe Popularity::ResultsContainer do
 
       expect(subject.results.collect(&:shares).reduce(:+)).to eq(subject.shares)
     end
-    
+
     it "should add methods together" do
       subject.add_result Popularity::Facebook.new("http://google.com")
       subject.add_result Popularity::Facebook.new("http://yahoo.com")

@@ -33,12 +33,41 @@ describe Popularity::RedditShare do
         expect(json["posts"]).to eq(25)
       end
 
-      it "should comments in json" do
+      it "should have comments in json" do
         expect(json["comments"]).to_not be_nil
       end
 
-      it "should score in json" do
+      it "should have score in json" do
         expect(json["score"]).to_not be_nil
+      end
+
+      it "should have _results in json" do
+        expect(json["_results"]).to_not be_nil
+      end
+
+      context "results" do
+        let(:json_results) { subject.as_json["_results"] }
+
+        it "should equal number of results" do
+          expect(subject.results.size).to eq(json_results.size)
+        end
+
+        it "should contain the result urls" do
+          subject.results.each_with_index do |result, index|
+            json_result = json_results[index]
+
+            expect(json_result.keys.first).to eq(result.url)
+          end
+        end
+
+        it "should contain the correct values" do
+          subject.results.each_with_index do |result, index|
+            json_result = json_results[index]
+            expect(json_result.values.first["score"]).to eq(result.score)
+            expect(json_result.values.first["comments"]).to eq(result.comments)
+            expect(json_result.values.first["total"]).to eq(result.total)
+          end
+        end
       end
     end
 
