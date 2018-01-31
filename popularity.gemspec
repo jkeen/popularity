@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jeff@keen.me"]
 
   spec.summary       = %Q{Popularity searches social networks a url and returns the metrics.}
-  spec.description   = %Q{Supports Facebook, Twitter, Pinterest, Reddit (Links, Posts, and Comments), Github, Soundcloud, Medium, and Rubygems}
+  spec.description   = %Q{Supports Facebook, Pinterest, Reddit (Links, Posts, and Comments), Github, Soundcloud, Medium, and Rubygems}
   spec.homepage      = "http://github.com/jkeen/popularity"
   spec.license       = "MIT"
 
