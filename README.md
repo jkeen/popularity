@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/jkeen/popularity.svg?branch=master)](https://travis-ci.org/jkeen/popularity)
+[![Gem](https://img.shields.io/gem/dt/popularity.svg)]()
+
 # Popularity
 
 ### Popularity searches social networks for urls and returns the metrics.
