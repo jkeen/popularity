@@ -1,5 +1,12 @@
 language: ruby
-
 rvm:
-  - "2.0.0"
-  - "2.1.1"
+- 2.0.0
+- 2.1.1
+deploy:
+  provider: rubygems
+  api_key:
+    secure: LTa0zOFDISP39k5VXo2R8RueoidWvPM8Tm1SdAMqOlKY6ORqTuCaGXnjkSlUHuZ2QMUgYZzcrqyYDqW/V8HI79ozl7/W5nwEGEcXRuUALYIyi6rspN6/auSaNTW7U5FmP0FJvKSkX9p3T88wzfuSlbRu9lWq2EQX0JJ7cEZ5rLc=
+  gem: popularity
+  on:
+    tags: true
+    repo: jkeen/popularity
