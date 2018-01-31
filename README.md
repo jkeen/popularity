@@ -2,12 +2,11 @@
 
 ### Popularity searches social networks for urls and returns the metrics.
 
-Current support includes: 
+Current support includes:
 
 Network          |  Stats                           | Restriction
 ---------        | ------                           | ---------
 Facebook         | `shares`, `comments`                                
-Twitter          | `tweets`                               
 Pinterest        | `pins`                               
 GooglePlus       | `plusones`                                
 Reddit           | `comments`, `score`
@@ -22,7 +21,6 @@ Rubygems         | `downloads`                      | only for rubygems
 > search = Popularity.search("http://google.com")
 > search.facebook.shares    #=> share count
 > search.facebook.comments  #=> comment count
-> search.twitter.tweets     #=> tweet count
 > search.pinterests.pins    #=> pin count
 > search.reddit.posts       #=> post count
 > search.reddit.comments    #=> comment count across all posts
@@ -31,7 +29,7 @@ Rubygems         | `downloads`                      | only for rubygems
 
 ```
 
-#### Combining multiple URLs 
+#### Combining multiple URLs
 
 Sometimes multiple URLs refer to the same thing. Maybe your URLs changed, but you don't want to lose out on counting those votes for the new location. Or you tweeted your blog address, but posted a link to soundcloud on reddit.
 
@@ -39,7 +37,6 @@ Sometimes multiple URLs refer to the same thing. Maybe your URLs changed, but yo
 > search = Popularity.search("http://jeffkeen.me/p/I-know-its-you/", "http://soundcloud.com/jeffkeen/i-know-its-you")
 > search.facebook.shares    #=> share count across all urls
 > search.facebook.comments  #=> comment count across all urls
-> search.twitter.tweets     #=> tweet count across all urls
 > search.pinterests.pins    #=> pin count across all urls
 > search.reddit.posts       #=> post count across all urls
 > search.reddit.comments    #=> comment count across all posts and urls
@@ -47,16 +44,16 @@ Sometimes multiple URLs refer to the same thing. Maybe your URLs changed, but yo
 > search.total              #=> All of the above numbers added up
 ```
 
-JSON: 
+JSON:
 
 ```ruby
-> search.as_json 
+> search.as_json
 #=> spits out by network, by url, and total stats
 ```
 
 ##### Digging into the details
 
-To see which results a url came back with: 
+To see which results a url came back with:
 ```ruby
 search = Popularity.search("https://medium.com/@jeffkeen/call-me-sometime-64ed463c02f0")
 search.sources #=> [:facebook, :reddit, :google_plus, :pinterest, :twitter, :medium]
@@ -74,8 +71,12 @@ p = Popularity::RedditComment.new("http://www.reddit.com/r/path/to/reddit/commen
 p.score #=> comment score
 ```
 
+### Why No Twitter?
+
+Twitter discontinued support for the url count API.
+
 ### Contributing to Popularity
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
 * Fork the project.

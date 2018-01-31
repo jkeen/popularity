@@ -29,7 +29,7 @@ describe Popularity::ResultsContainer do
       expect(1).to equal(subject.results.size)
 
       expect{
-        subject.add_result(Popularity::Twitter.new("http://google.com"))
+        subject.add_result(Popularity::Pinterest.new("http://google.com"))
       } .to raise_error(TypeError)
 
     end

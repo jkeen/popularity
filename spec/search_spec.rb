@@ -9,7 +9,7 @@ describe Popularity::Search do
     }
 
     it "should return correct total" do
-      expect(23422376).to equal subject.total
+      expect(23410825).to equal subject.total
     end
 
     context "json" do

@@ -5,6 +5,7 @@ require 'simplecov'
 SimpleCov.start
 
 require 'popularity'
+require 'webmock/rspec'
 require 'vcr'
 
 VCR.configure { |c|
